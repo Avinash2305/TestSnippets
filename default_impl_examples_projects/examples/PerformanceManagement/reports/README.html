@@ -1,0 +1,320 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>Bandwidth Utilization Report - Example</title>
+<style> 
+body 
+{ 
+  background:white; 
+  font-family:Arial, Helvetica; 
+  font-size:10pt; 
+} 
+
+H1 
+{ 
+  font-size:18pt; 
+} 
+
+H2 
+{ 
+  font-size:16pt; 
+} 
+
+H3 
+{ 
+  font-size:12pt; 
+} 
+</style>
+</head>
+<body>
+
+<h2>
+Bandwidth Utilization Report</h2>
+
+<p><br>
+<hr SIZE=2 NOSHADE WIDTH="100%">
+<li>
+<a href="#Feature overview">Feature Overview</a></li>
+
+<li>
+<a href="#Example overview">Example Overview</a></li>
+
+<li>
+<a href="#Intergration with Web NMS">Integration with Web NMS</a></li>
+
+<li>
+<a href="#Sample output">Sample Output</a></li>
+
+<br>
+<hr SIZE=2 NOSHADE WIDTH="100%">
+<h3>
+<a NAME="Feature overview"></a>Feature Overview</h3>
+You can develop your own reports in Web NMS by writing a class implementing
+<b><i><a href="../../../../help/javadocs/consolidated_javadocs/com/adventnet/nms/poll/Reporter.html">com.adventnet.nms.poll.Reporter</a></i></b>
+interface. This example program, <b>BandwidthUtilization.java</b>, is for
+generating reports on bandwidth utilization of devices. This makes use
+of SNMP data collection done by the Performance Management part of Web
+NMS.
+<p>For more details, refer to the help document "<a href="../../../../help/developer_guide/performance_management/customizing_reports/perf_customizing_reports.html">Creating
+Performance Reports</a>" in Developer guide.
+<h3>
+<a NAME="Example overview"></a>Example Overview</h3>
+<b>Example name</b><i>:&nbsp; </i><b>BandwidthUtilization.java</b>
+<br><b>Location</b><i> : &lt;Web NMS Home>/examples/PerformanceManagement/reports/bandwidth_utilization
+directory.</i>
+<p>Bandwidth of a device on a network is the maximum amount of data that
+the device can take in from the network or give out into the network at
+a given instant. The Network Interface Card (NIC) in the device determines
+this maximum limit. The amount of data transferred across a device's network
+card, at a given instant, is the actual bandwidth utilized by the device
+at that instant.
+<p>This example "Bandwidth utilization Report" gives the bandwidth utilization
+of devices:
+<ul>
+<li>
+in Kbps (Kilobits per second), and</li>
+
+<li>
+as a percentage of that device's available bandwidth.</li>
+</ul>
+The following OIDs are required for this report:
+<ol>
+<li>
+2.2.1.10 (ifInOctets),</li>
+
+<li>
+2.2.1.16 (ifOutOctets), and</li>
+
+<li>
+2.2.1.5 (ifSpeed).</li>
+</ol>
+This report is implemented for daily scheduling. It uses the half-duplex
+formula for bandwidth calculation (assuming that the devices are operating
+in half-duplex mode).
+<p><b>Kbps</b>:
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="100%" >
+<tr>
+<td>
+<center><font face="Courier New,Courier">(DifInOctets (bytes/sec) + DifOutOctets
+(bytes/sec)) * 8&nbsp;</font>
+<br><font face="Courier New,Courier">---------------------------------------------</font>
+<br><font face="Courier New,Courier">1024</font>
+<p><font face="Courier New,Courier">(OR)</font>
+<p><font face="Courier New,Courier">(DifInOctets (kilobytes/sec) + DifOutOctets
+(Kilobytes/sec)) * 8&nbsp;</font></center>
+</td>
+</tr>
+</table>
+
+<p><b>Percentage of device's available bandwidth:</b>
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="100%" >
+<tr>
+<td>
+<center><font face="Courier New,Courier">(DifInOctets (bytes/sec) + DifOutOctets
+(bytes/sec)) * 8 * 100</font>
+<br><font face="Courier New,Courier">-------------------------------------------------------------</font>
+<br><font face="Courier New,Courier">ifSpeed (bits/sec)</font></center>
+</td>
+</tr>
+</table>
+
+<ul>
+<li>
+"D" means the delta value, that is, the difference in the value for the
+OID between the current instant and the previous instance.</li>
+
+<li>
+ifInOctets - The total number of octets received on the interface, including
+framing characters.</li>
+
+<li>
+ifOutOctets - The total number of octets transmitted out of the interface,
+including framing characters.</li>
+
+<li>
+ifSpeed - An estimate of the interface's current bandwidth in bits per
+second. For interfaces that do not&nbsp; vary in bandwidth or for those
+where no accurate estimation can be made, this object should contain the
+nominal bandwidth.</li>
+</ul>
+
+<h3>
+<a NAME="Intergration with Web NMS"></a>Integration with Web NMS</h3>
+Follow these steps:
+<blockquote>1. Configure the required OIDs with the required criteria.
+PolledData for 2.2.1.10 and 2.2.1.16 must store the delta values (instead
+of absolute counter values) divided by the time period of the delta. This
+effectively stores the interface in and out octets in bytes/sec. To achieve
+this, the PolledData for the OIDs must have <b>saveAbsolutes</b> as "false"
+and <b>timeAvg
+</b>as "true". PolledData for 2.2.1.5 must store the absolute
+values (in bits per second), hence <b>saveAbsolutes</b> should be "true"
+and <b>timeAvg</b>should be "false". The polling period of the 3 PolledData
+must be equal. Only if a device has all the three OIDs with this specific
+configuration will it be included in the report.
+<p>To achieve the above, add the following entries in Polling.conf:
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="100%" >
+<tr>
+<td><font face="Courier New,Courier">&lt;POLLING_OBJECT ></font>
+<br><font face="Courier New,Courier">...</font>
+<br><font face="Courier New,Courier">...</font>
+<br><b><font face="Courier New,Courier">&lt;DATA_COLLECTION></font></b>
+<blockquote><b><font face="Courier New,Courier">&lt;DATA_TO_POLL&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+type="multiple"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+name="Interface_in_octets"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oid="2.2.1.10"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+saveAbsolutes="false"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+timeAvg="true"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pollingPeriod="300"/></font></b>
+<br><b><font face="Courier New,Courier">&lt;DATA_TO_POLL&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+type="multiple"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+name="Interface_out_octets"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oid="2.2.1.16"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+saveAbsolutes="false"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+timeAvg="true"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pollingPeriod="300"/></font></b>
+<br><b><font face="Courier New,Courier">&lt;DATA_TO_POLL&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+type="multiple"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+name="Interface_speed"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oid="2.2.1.5"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+saveAbsolutes="true"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+timeAvg="false"&nbsp;</font></b>
+<br><b><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pollingPeriod="300"/></font></b></blockquote>
+<b><font face="Courier New,Courier">&lt;/DATA_COLLECTION></font></b>
+<br><font face="Courier New,Courier">...</font>
+<br><font face="Courier New,Courier">...</font>
+<br><font face="Courier New,Courier">&lt;/POLLING_OBJECT></font></td>
+</tr>
+</table>
+
+<p><b>2. Modify the templates as required (Optional)</b>
+<p>You may modify <b>SummaryTemplate.html</b> and <b>DetailsTemplate.html
+</b>template
+files. Bandwidth utilization report is generated in the format specified
+in these files. You may change the font, color, style, etc. of the template
+files.
+<p>For more details about the template files, refer to the Javadoc comments
+in the Template.java file present one directory above this directory.
+<p><b>3. Compile the required classes</b>
+<ul>
+<li>
+&nbsp;Add the following to your classpath:</li>
+
+<ul>
+<li>
+&lt;Web NMS Home>/classes</li>
+
+<li>
+&lt;Web NMS Home>/classes/AdventNetCharts.jar</li>
+
+<li>
+&lt;Web NMS Home>/classes/jcchartK.jar</li>
+
+<li>
+&lt;Web NMS Home>/classes/JimiProClasses.zip</li>
+</ul>
+
+<li>
+Compile <b>Template.java</b> (present one directory above this directory)
+and <b>BandwidthUtilization.java</b> into
+<i>&lt;Web NMS Home>/classes</i>
+directory.</li>
+</ul>
+<b>4. Add this report for reports scheduling</b> Add an entry in <b>Reports.conf
+</b>present
+under <i>&lt;Web NMS Home>/conf</i> directory:
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="100%" >
+<tr>
+<td><font face="Arial,Helvetica">&nbsp;</font><font face="Courier New,Courier">&lt;REPORT</font>
+<blockquote><font face="Courier New,Courier">className="com.adventnet.nms.example.report.BandwidthUtilization"</font>
+<br><font face="Courier New,Courier">DAILY="true" /></font></blockquote>
+</td>
+</tr>
+</table>
+
+<p><b>5. Start/restart WebNMS</b> Start Web NMS or restart WebNMS if it
+was running already.
+<p>This report will be triggered daily, some time after midnight. Report
+generation will take a few minutes to a few hours depending on the number
+of devices for which the required bandwidth utilization OIDs are configured.</blockquote>
+
+<h3>
+<a NAME="Sample output"></a>Sample Output</h3>
+At the stroke of midnight this report will be generated and you will see
+an HTML page as follows:
+<center>
+<p><img SRC="images/bandwidthscr1.jpg" ALT="Bandwidth utilization - agents list image" height=364 width=500></center>
+
+<p>This page displays the list of agents and the corresponding minimum,
+maximum and average percentage of bandwidth utilization. When you select
+one of the agents , you will get another page which will show the following
+statistics.
+<center>
+<p><img SRC="images/bandwidthscr2.jpg" ALT="Bandwidth utilization - Data collection summary image" height=401 width=500></center>
+For the chosen interface "Inteface .1", this image gives you a summary
+of data collection performed for this interface.
+<center>
+<p><img SRC="images/bandwidthscr3.jpg" ALT="Bandwidth utilization bar graph" height=303 width=500></center>
+
+<p>This bar graph shows the inbound and outbound traffic for the interface
+when measured over time.
+<center>
+<p><img SRC="images/bandwidthscr4.jpg" ALT="Bandwidth utilization (%) line graph" height=256 width=500></center>
+
+<p>This line graph shows the trend of bandwidth utilization.
+<center>
+<p><img SRC="images/bandwidthscr5.jpg" ALT="Bandwidth utilization statistics Image" height=279 width=492></center>
+
+<p>Finally, this table gives you statistical values of bandwidth utilization.
+<p><b>To revert to the original configuration, please do the following:</b>
+<ol>
+<li>
+<b>Delete all the PolledData that were created by the Polling Engine, as
+a result of step 1. in "Integration with Web NMS". Deletion may be performed
+through the client UI or by directly using the PollAPI.&nbsp; You may delete
+the PollingObject from the client UI or using the PollAPI. This will delete
+the PollingObject and the corresponding PolledData. (optional)</b></li>
+
+<li>
+<b>Stop the Web NMS server.</b></li>
+
+<li>
+<b>Delete the entry that was added to reports.conf.</b></li>
+
+<li>
+<b>Delete the classes that were created in step 3 i.e. "Compile the required
+classes".</b></li>
+
+<li>
+<b>Delete any generated reports in <i>&lt;Web NMS Home>/reports/bandwidth_utilization</i>
+directory. (optional)</b></li>
+</ol>
+
+<hr SIZE=2 NOSHADE WIDTH="100%">
+<p>Copyright &copy; 1996-2002, AdventNet Inc. All Rights Reserved.
+</body>
+</html>

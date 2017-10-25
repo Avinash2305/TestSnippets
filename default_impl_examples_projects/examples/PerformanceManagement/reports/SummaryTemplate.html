@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="author" content="Performance Team">
+  <title>Bandwidth Utilization Summary -- $reportDate$</title>
+</head>
+<body>
+<div align="Center"> 
+<h2>Bandwidth Utilization Summary</h2>
+     $reportDate$<br>
+ </div>
+<hr width="100%" size="1" noshade=""> 
+<div align="Center"> 
+<table cellpadding="4" cellspacing="0" border="1" width="70%">
+   <tbody>
+     <tr>
+       <th valign="Middle" rowspan="2" bgcolor="#c0c0c0" align="Center">Device
+ Name (Agent)<br>
+       </th>
+       <th valign="Middle" colspan="3" bgcolor="#c0c0c0" align="Center">Utilization (%)<br>
+       </th>
+     </tr>
+     <tr>
+       <th valign="Middle" bgcolor="#c0c0c0">Minimum<br>
+       </th>
+       <th valign="Middle" bgcolor="#c0c0c0">Maximum<br>
+       </th>
+       <th valign="Middle" bgcolor="#c0c0c0">Average<br>
+       </th>
+     </tr>
+$$agentRow$$
+     <tr>
+       <td valign="Middle" align="Center"><a href="$detailedReport$">$agentName$</a><br>
+       </td>
+       <td valign="Middle" align="Center">$minUtilization$<br>
+       </td>
+       <td valign="Middle" align="Center">$maxUtilization$<br>
+       </td>
+       <td valign="Middle" align="Center">$avgUtilization$<br>
+       </td>
+     </tr>
+$$agentRow$$
+     <tr>
+       <td valign="Middle" align="Center" rowspan="1" colspan="4"><i><b>$noOfAgents$ 
+devices.</b></i><br>
+       </td>
+     </tr>
+   
+  </tbody> 
+</table>
+ 
+<hr width="100%" size="1" noshade=""> 
+<table cellpadding="2" cellspacing="2" border="0" width="90%" align="Center">
+   <tbody>
+     <tr>
+       <td valign="Top"><small>Bandwidth utilization report gives the bandwidth
+ utilization of each device. The OIDs required are: 2.2.1.10 (ifInOctets),
+2.2.1.16 (ifOutOctets) and 2.2.1.5 (ifSpeed). PolledData for 2.2.1.10 and
+2.2.1.16 must store the delta values (instead of absolute counter values)
+divided by the time period of the delta. Effectively this stores the interface
+in and out octets in bytes/sec. To achieve this the PolledData for the OIDs
+must have saveAbsolutes as 'false'  and timeAvg as 'true'. PolledData for
+2.2.1.5 must store the absolute values  (in bits per second), hence saveAbsolutes
+should be 'true' and 'timeAvg' should be 'false'. The polling period of the 3 PolledData must be equal. Only if a device has all the three OIDs with this specific configuration it will be included in the report. Half-duplex formula is used for utilization computation.<br>
+<b>Note:</b>If the above table indicates "0 devices" it means that no data was collected for any of the devices which matched the required criteria.</small>
+       </td>
+     </tr>
+     <tr>
+       <td valign="Top" align="Center"><small><font color="#999999"> Report 
+generated at:  $reportGeneratedTime$</font></small><br>
+       </td>
+     </tr>
+  </tbody> 
+</table>
+ </div>
+
+</body>
+</html>

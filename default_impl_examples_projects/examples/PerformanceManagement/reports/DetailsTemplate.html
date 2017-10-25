@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="author" content="Performance Team">
+  <title>Bandwidth Utilization: $agentName$ -- $reportDate$</title>
+</head>
+<body>
+<div align="Center">
+<h2>Bandwidth Utilization: $agentName$</h2>
+       $reportDate$<br>
+</div>
+<hr width="100%" size="1" noshade="">
+<h3>Interface</h3>
+<ul>
+	$$interfaces$$
+  <li><a href="#$interface$">Interface $interface$</a></li>
+	$$interfaces$$
+</ul>
+<hr width="100%" size="1" noshade="">
+$$interfaceGroup$$
+<div align="Center">
+<h3><a name="$interface$">Interface $interface$</a></h3>
+<table cellpadding="4" cellspacing="1" border="0" width="50%" align="Center">
+  <tbody>
+    <tr>
+      <th valign="Top" rowspan="1" colspan="2" bgcolor="#c0c0c0">Data collection
+summary<br>
+      </th>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#eeeeee">Minimum utilization<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#eeeeee">$minUtilization$% @ $minUtilizationTime$<br>
+      </td>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#dcdcdc">Maximum utilization<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#dcdcdc">$maxUtilization$% @ $maxUtilizationTime$<br>
+      </td>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#eeeeee">Average utilization<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#eeeeee">$avgUtilization$%<br>
+      </td>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#dcdcdc">Time range<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#dcdcdc">$fromTime$ to
+$toTime$<br>
+      </td>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#eeeeee">Polling period<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#eeeeee">$pollingPeriod$
+ seconds<br>
+      </td>
+    </tr>
+    <tr>
+      <th valign="Middle" align="Center" bgcolor="#dcdcdc"># of collected
+values<br>
+      </th>
+      <td valign="Middle" align="Center" bgcolor="#dcdcdc">$noOfValues$<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h4>Bandwidth Utilization (kbps)</h4>
+<img src="$stackedGraphFileName$" alt="Bandwidth utilization (kbps): $agentName$ (Interface $interface$)" width="$stackedGraphWidth$" height="$stackedGraphHeight$" border="0">
+<br>
+<table cellpadding="1" cellspacing="4" border="0" width="20%">
+  <tbody>
+    <tr>
+      <td valign="Middle" width="10%" bgcolor="#000000">
+         <table cellpadding="0" cellspacing="0" border="0" width="100%">
+           <tbody>
+             <tr>
+               <td valign="Top" bgcolor="#00ff00"><br>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+      </td>
+      <td valign="Middle" align="Left" width="90%">Inbound traffic<br>
+      </td>
+    </tr>
+	<tr>
+	  <td valign="Middle" width="10%" bgcolor="#000000">
+	  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+	    <tbody>
+	      <tr>
+	        <td bgcolor="#0000ff" valign="Top"><br>
+	        </td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  </td>
+	  <td valign="Middle" align="Left" width="90%">Outbound traffic<br>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+<br>
+<h4>Bandwidth Utilization (%)</h4>
+<img src="$lineGraphFileName$" alt="Bandwidth utilization (%): $agentName$ (Interface $interface$)" width="$lineGraphWidth$" height="$lineGraphHeight$" border="0">
+<br>
+<br>
+<h4>Details</h4>
+<table cellpadding="4" cellspacing="0" border="1" width="70%">
+  <tbody>
+    <tr>
+      <th valign="Middle" bgcolor="#c0c0c0" align="Center">Time<br>
+      </th>
+      <th valign="Middle" bgcolor="#c0c0c0" align="Center">In octets<br>
+  (kbps)<br>
+      </th>
+      <th valign="Middle" bgcolor="#c0c0c0" align="Center">Out octets<br>
+  (kbps)<br>
+      </th>
+      <th valign="Middle" bgcolor="#c0c0c0" align="Center">Available bandwidth<br>
+  (kbps)<br>
+      </th>
+      <th valign="Middle" bgcolor="#c0c0c0" align="Center">Utilization<br>(%)<br>
+      </th>
+    </tr>
+$$utilizationRow$$
+    <tr>
+      <td valign="Middle" align="Center">$time$<br>
+      </td>
+      <td valign="Middle" align="Center">$inOctets$<br>
+      </td>
+      <td valign="Middle" align="Center">$outOctets$<br>
+      </td>
+      <td valign="Middle" align="Center">$avlBandwidth$<br>
+      </td>
+      <td valign="Middle" align="Center">$utilization$<br>
+      </td>
+    </tr>
+$$utilizationRow$$
+  </tbody>
+</table>
+<hr width="100%" size="1" noshade="">
+</div>
+$$interfaceGroup$$
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="0" width="90%" align="Center">
+  <tbody>
+    <tr>
+      <td valign="Top"><small>This report gives the detailed bandwidth utilization
+for $agentName$ for the date $reportDate$. Utilization calculated here is
+using the half-duplex formula: ((In octets * Out octets) * 100)/(Available 
+bandwidth/8) %.<br>
+The bandwidth utilization graph showing inbound and outbound traffic is a stacked bar graph with the outbound traffic stacked over the inbound traffic.</small><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="Top" align="Center"><small><font color="#999999"> Report 
+ generated at:  $reportGeneratedTime$</font></small><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
