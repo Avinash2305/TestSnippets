@@ -44,6 +44,12 @@ argument followed by its value:
  -l : SECURITY_LEVEL (NoAuthNoPriv / AuthNoPriv / AuthPriv)
  -d : if specified will print the packets
  */
+/*
+Usage for v1/v2/v3:
+java snmpget -v v1 -p 8001 -d 172.21.215.93 .1.3.6.1.2.1.1.7.0
+java snmpget -v v2 -c public -p 8001 -d 172.21.215.93 .1.3.6.1.2.1.1.7.0
+java snmpget -v v3 -p 8001 -u privUser -a MD5 -w authUser -s privUser -n priv -l AuthPriv -pp CBS-DES -d 172.21.215.93 .1.3.6.1.2.1.1.7.0
+*/
 
 import com.adventnet.snmp.beans.*;
 import com.adventnet.snmp.snmp2.*;
