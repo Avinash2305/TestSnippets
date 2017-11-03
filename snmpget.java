@@ -46,6 +46,7 @@ argument followed by its value:
  */
 
 import com.adventnet.snmp.beans.*;
+import com.adventnet.snmp.snmp2.*;
 
 public class snmpget {
 
@@ -195,19 +196,47 @@ public class snmpget {
     target.setObjectIDList(oids);
 
 
-    String result[] = target.snmpGetList();  // do a get request
+    String result1[] = target.snmpGetList();  // do a get request
 
-    if (result == null) {
+    if (result1 == null) {
         System.err.println("Request failed or timed out. \n"+
                    target.getErrorString());
 
     } else { // print the values
         System.out.println("Response received.  Values:");
 
-        for (int i=0;i<result.length;i++) {
-            System.out.println(target.getObjectID(i) + ": " + result[i]);
+        for (int i=0;i<result1.length;i++) {
+            System.out.println(target.getObjectID(i) + ": " + result1[i]);
         }
     }
+    /*getBulk*/
+    //String oidlist[] = {".1.3.6.1.2.1.1.1", ".1.3.6.1.2.1.2.2", ".1.3.6.1.2.1.1.5", ".1.3.6.1.2.1.1.6"};
+    String oidlist[] ={".1.3.6.1.2.1.10.127.1.3.3.1.2",".1.3.6.1.2.1.10.127.1.3.3.1.3",".1.3.6.1.2.1.10.127.1.3.3.1.4",".1.3.6.1.2.1.10.127.1.3.3.1.5",".1.3.6.1.2.1.10.127.1.3.3.1.9"};
+    target.setObjectIDList(oidlist);
+    System.out.println("get bulk calling:::");
+    SnmpVarBind result[][] = target.snmpGetBulkVariableBindings();
+    System.out.println("get bulk requested:::");
+    int errorCode = target.getErrorCode();
+    System.out.println("getbulk errorCode"+errorCode);
+    if(errorCode != 0 || result == null){
+	    System.out.println("Exception in getbulk");
+    }
+    System.out.println("getbulk result="+result);
+    SnmpVar snmpVariable=null;
+    SnmpOID soid=null;
+    for (int j = 0; j < result[0].length; j++) {
+	    for (int k = 0; k < oidlist.length; k++) {
+		    SnmpVarBind varbind = result[k][j];
+		    soid = varbind.getObjectID();
+		    snmpVariable=varbind.getVariable();
+
+		    String oid=soid.toString();
+		    String variable=snmpVariable.toString();
+		    System.out.println("getbulk oid="+oid);
+		    System.out.println("getbulk variable="+variable);
+	    }
+    }
+    /*getBulk Ends*/
 
     System.exit(0);
 
