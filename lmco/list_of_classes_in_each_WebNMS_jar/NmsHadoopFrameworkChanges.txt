@@ -1,0 +1,12 @@
+Archive:  NmsHadoopFrameworkChanges.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  10-31-17 12:21   META-INF/
+      104  10-31-17 12:21   META-INF/MANIFEST.MF
+        0  10-31-17 12:21   com/
+        0  10-31-17 12:21   com/adventnet/
+        0  10-31-17 12:21   com/adventnet/nms/
+        0  10-31-17 12:21   com/adventnet/nms/util/
+    57524  10-31-17 12:21   com/adventnet/nms/util/NmsUtil.class
+ --------                   -------
+    57628                   7 files
