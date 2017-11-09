@@ -1,0 +1,36 @@
+Archive:  javax.annotation-api-1.2.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     3264  10-23-17 12:28   META-INF/MANIFEST.MF
+     2469  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  04-26-13 19:47   META-INF/
+    36116  04-26-13 19:47   META-INF/LICENSE.txt
+        0  04-26-13 19:47   META-INF/maven/
+        0  04-26-13 19:47   META-INF/maven/javax.annotation/
+        0  04-26-13 19:47   META-INF/maven/javax.annotation/javax.annotation-api/
+    13432  04-26-13 19:47   META-INF/maven/javax.annotation/javax.annotation-api/pom.xml
+      120  04-26-13 19:47   META-INF/maven/javax.annotation/javax.annotation-api/pom.properties
+        0  04-26-13 19:47   javax/
+        0  04-26-13 19:47   javax/annotation/
+        0  04-26-13 19:47   javax/annotation/security/
+        0  04-26-13 19:47   javax/annotation/sql/
+      678  04-26-13 19:47   javax/annotation/Generated.class
+      453  04-26-13 19:47   javax/annotation/ManagedBean.class
+     2085  04-26-13 19:47   javax/annotation/package.html
+      436  04-26-13 19:47   javax/annotation/PostConstruct.class
+      430  04-26-13 19:47   javax/annotation/PreDestroy.class
+      438  04-26-13 19:47   javax/annotation/Priority.class
+     1179  04-26-13 19:47   javax/annotation/Resource$AuthenticationType.class
+      974  04-26-13 19:47   javax/annotation/Resource.class
+      467  04-26-13 19:47   javax/annotation/Resources.class
+      473  04-26-13 19:47   javax/annotation/security/DeclareRoles.class
+      445  04-26-13 19:47   javax/annotation/security/DenyAll.class
+     2095  04-26-13 19:47   javax/annotation/security/package.html
+      449  04-26-13 19:47   javax/annotation/security/PermitAll.class
+      487  04-26-13 19:47   javax/annotation/security/RolesAllowed.class
+      458  04-26-13 19:47   javax/annotation/security/RunAs.class
+     1044  04-26-13 19:47   javax/annotation/sql/DataSourceDefinition.class
+      471  04-26-13 19:47   javax/annotation/sql/DataSourceDefinitions.class
+ --------                   -------
+    69839                   31 files

@@ -1,0 +1,38 @@
+Archive:  AdventNetWCFCore.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2361  10-23-17 12:28   META-INF/MANIFEST.MF
+     2541  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  11-17-03 19:47   META-INF/
+     5213  11-17-03 19:47   META-INF/webclient.tld
+        0  11-17-03 19:47   com/
+        0  11-17-03 19:47   com/adventnet/
+        0  11-17-03 19:47   com/adventnet/webclient/
+        0  11-17-03 19:47   com/adventnet/webclient/datamodel/
+        0  11-17-03 19:47   com/adventnet/webclient/struts/
+        0  11-17-03 19:47   com/adventnet/webclient/struts/action/
+        0  11-17-03 19:47   com/adventnet/webclient/util/
+        0  11-17-03 19:47   com/adventnet/webclient/util/logging/
+        0  11-17-03 19:47   com/adventnet/webclient/util/logging/di/
+        0  11-17-03 19:47   com/adventnet/webclient/xml/
+      244  11-17-03 19:47   com/adventnet/webclient/datamodel/PropertyModel.class
+      747  11-17-03 19:47   com/adventnet/webclient/datamodel/PropertyModelImpl.class
+     1734  11-17-03 19:47   com/adventnet/webclient/ClientException.class
+     3359  11-17-03 19:47   com/adventnet/webclient/WebClientManager.class
+     1187  11-17-03 19:47   com/adventnet/webclient/struts/action/SaveTokenAction.class
+     4046  11-17-03 19:47   com/adventnet/webclient/struts/action/SynchroAction.class
+      603  11-17-03 19:47   com/adventnet/webclient/util/logging/LogLevel.class
+      314  11-17-03 19:47   com/adventnet/webclient/util/logging/WCFLogger.class
+     1164  11-17-03 19:47   com/adventnet/webclient/util/logging/di/DefaultLogger.class
+     4048  11-17-03 19:47   com/adventnet/webclient/util/EncodingFilter.class
+     1834  11-17-03 19:47   com/adventnet/webclient/util/EntityResolverImpl.class
+     1745  11-17-03 19:47   com/adventnet/webclient/util/ErrorHandlerImpl.class
+     1152  11-17-03 19:47   com/adventnet/webclient/util/ErrorListenerImpl.class
+     9584  11-17-03 19:47   com/adventnet/webclient/util/FrameWorkUtil.class
+     3407  11-17-03 19:47   com/adventnet/webclient/util/ValueRetriever.class
+     2625  11-17-03 19:47   com/adventnet/webclient/util/WebClientUtil.class
+      330  11-17-03 19:47   com/adventnet/webclient/xml/XmlAction.class
+     1637  11-17-03 19:47   com/adventnet/webclient/WebClientServlet.class
+ --------                   -------
+    51251                   33 files

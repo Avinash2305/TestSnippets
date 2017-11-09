@@ -1,0 +1,30 @@
+Archive:  jersey-container-servlet.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     3142  10-23-17 12:29   META-INF/MANIFEST.MF
+     1726  10-23-17 12:29   META-INF/WEBNMS.SF
+     1376  10-23-17 12:29   META-INF/WEBNMS.RSA
+        0  04-29-14 01:29   META-INF/
+        0  04-29-14 01:29   META-INF/maven/
+        0  04-29-14 01:29   META-INF/maven/org.glassfish.jersey.containers/
+        0  04-29-14 01:29   META-INF/maven/org.glassfish.jersey.containers/jersey-container-servlet/
+      162  04-29-14 01:29   META-INF/maven/org.glassfish.jersey.containers/jersey-container-servlet/pom.properties
+     4646  04-28-14 06:36   META-INF/maven/org.glassfish.jersey.containers/jersey-container-servlet/pom.xml
+        0  04-29-14 01:29   META-INF/services/
+       67  02-24-14 12:01   META-INF/services/javax.servlet.ServletContainerInitializer
+       67  02-24-14 12:01   META-INF/services/org.glassfish.jersey.servlet.spi.AsyncContextDelegateProvider
+        0  04-29-14 01:29   org/
+        0  04-29-14 01:29   org/glassfish/
+        0  04-29-14 01:29   org/glassfish/jersey/
+        0  04-29-14 01:29   org/glassfish/jersey/servlet/
+        0  04-29-14 01:29   org/glassfish/jersey/servlet/async/
+      317  04-29-14 01:29   org/glassfish/jersey/servlet/async/AsyncContextDelegateProviderImpl$1.class
+     2336  04-29-14 01:29   org/glassfish/jersey/servlet/async/AsyncContextDelegateProviderImpl$ExtensionImpl.class
+     1199  04-29-14 01:29   org/glassfish/jersey/servlet/async/AsyncContextDelegateProviderImpl.class
+        0  04-29-14 01:29   org/glassfish/jersey/servlet/init/
+    12743  04-29-14 01:29   org/glassfish/jersey/servlet/init/JerseyServletContainerInitializer.class
+        0  04-29-14 01:29   org/glassfish/jersey/servlet/init/internal/
+     3002  04-29-14 01:29   org/glassfish/jersey/servlet/init/internal/LocalizationMessages.class
+     2799  02-24-14 12:01   org/glassfish/jersey/servlet/init/internal/localization.properties
+ --------                   -------
+    33582                   25 files

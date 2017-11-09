@@ -1,0 +1,37 @@
+Archive:  oauth1-signature-2.7.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2756  10-23-17 12:28   META-INF/MANIFEST.MF
+     2853  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  03-12-14 19:20   META-INF/
+        0  03-12-14 19:20   META-INF/maven/
+        0  03-12-14 19:20   META-INF/maven/org.glassfish.jersey.security/
+        0  03-12-14 19:20   META-INF/maven/org.glassfish.jersey.security/oauth1-signature/
+     3479  03-12-14 18:07   META-INF/maven/org.glassfish.jersey.security/oauth1-signature/pom.xml
+      128  03-12-14 19:20   META-INF/maven/org.glassfish.jersey.security/oauth1-signature/pom.properties
+        0  03-12-14 19:20   org/
+        0  03-12-14 19:20   org/glassfish/
+        0  03-12-14 19:20   org/glassfish/jersey/
+        0  03-12-14 19:20   org/glassfish/jersey/oauth1/
+        0  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/
+        0  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/internal/
+      597  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1SignatureMethod.class
+      642  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1Request.class
+     1401  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1Secrets.class
+      552  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/InvalidSecretException.class
+     7707  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1Signature.class
+     1596  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/PlaintextMethod.class
+      660  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1SignatureException.class
+     1012  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1SignatureFeature.class
+     5627  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/RsaSha1Method.class
+     2172  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/internal/LocalizationMessages.class
+     2209  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/internal/localization.properties
+     1226  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1Signature$1.class
+      591  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/UnsupportedSignatureMethodException.class
+     3272  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/Base64.class
+     1317  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1SignatureFeature$Binder.class
+     8629  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/OAuth1Parameters.class
+     3080  03-12-14 19:20   org/glassfish/jersey/oauth1/signature/HmaSha1Method.class
+ --------                   -------
+    52882                   32 files

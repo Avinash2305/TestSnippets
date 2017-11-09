@@ -1,0 +1,46 @@
+Archive:  aopalliance-repackaged-2.2.0.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     4145  10-23-17 12:28   META-INF/MANIFEST.MF
+     3520  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  01-13-14 13:33   META-INF/
+        0  01-13-14 13:33   META-INF/maven/
+        0  01-13-14 13:33   META-INF/maven/org.glassfish.hk2.external/
+        0  01-13-14 13:33   META-INF/maven/org.glassfish.hk2.external/aopalliance-repackaged/
+     7349  01-13-14 13:23   META-INF/maven/org.glassfish.hk2.external/aopalliance-repackaged/pom.xml
+      133  01-13-14 13:33   META-INF/maven/org.glassfish.hk2.external/aopalliance-repackaged/pom.properties
+        0  01-13-14 13:33   org/
+        0  01-13-14 13:33   org/aopalliance/
+        0  01-13-14 13:33   org/aopalliance/aop/
+        0  01-13-14 13:33   org/aopalliance/intercept/
+        0  01-13-14 13:33   org/aopalliance/instrument/
+        0  01-13-14 13:33   org/aopalliance/reflect/
+     1789  01-13-14 13:33   org/aopalliance/aop/AspectException.class
+      113  01-13-14 13:33   org/aopalliance/aop/Advice.class
+      217  01-13-14 13:33   org/aopalliance/intercept/Invocation.class
+      234  01-13-14 13:33   org/aopalliance/intercept/MethodInvocation.class
+      318  01-13-14 13:33   org/aopalliance/intercept/MethodInterceptor.class
+      375  01-13-14 13:33   org/aopalliance/intercept/FieldAccess.class
+      163  01-13-14 13:33   org/aopalliance/intercept/Interceptor.class
+      336  01-13-14 13:33   org/aopalliance/intercept/ConstructorInterceptor.class
+      297  01-13-14 13:33   org/aopalliance/intercept/Joinpoint.class
+      332  01-13-14 13:33   org/aopalliance/intercept/FieldInterceptor.class
+      254  01-13-14 13:33   org/aopalliance/intercept/ConstructorInvocation.class
+     1537  01-13-14 13:33   org/aopalliance/instrument/Instrumentor.class
+      835  01-13-14 13:33   org/aopalliance/instrument/InstrumentationError.class
+      463  01-13-14 13:33   org/aopalliance/instrument/Instrumentation.class
+      783  01-13-14 13:33   org/aopalliance/instrument/UndoNotSupportedException.class
+      172  01-13-14 13:33   org/aopalliance/reflect/ClassLocator.class
+      384  01-13-14 13:33   org/aopalliance/reflect/Member.class
+      326  01-13-14 13:33   org/aopalliance/reflect/Method.class
+      524  01-13-14 13:33   org/aopalliance/reflect/Code.class
+      166  01-13-14 13:33   org/aopalliance/reflect/UnitLocator.class
+      166  01-13-14 13:33   org/aopalliance/reflect/CodeLocator.class
+      443  01-13-14 13:33   org/aopalliance/reflect/ProgramUnit.class
+      305  01-13-14 13:33   org/aopalliance/reflect/Field.class
+      562  01-13-14 13:33   org/aopalliance/reflect/Class.class
+      180  01-13-14 13:33   org/aopalliance/reflect/Metadata.class
+      119  01-13-14 13:33   org/aopalliance/reflect/Locator.class
+ --------                   -------
+    27916                   41 files

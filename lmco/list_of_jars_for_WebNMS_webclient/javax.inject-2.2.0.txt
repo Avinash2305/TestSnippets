@@ -1,0 +1,22 @@
+Archive:  javax.inject-2.2.0.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     1511  10-23-17 12:28   META-INF/MANIFEST.MF
+     1099  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  01-13-14 13:34   META-INF/
+        0  01-13-14 13:34   META-INF/maven/
+        0  01-13-14 13:34   META-INF/maven/org.glassfish.hk2.external/
+        0  01-13-14 13:34   META-INF/maven/org.glassfish.hk2.external/javax.inject/
+     6891  01-13-14 13:23   META-INF/maven/org.glassfish.hk2.external/javax.inject/pom.xml
+      123  01-13-14 13:33   META-INF/maven/org.glassfish.hk2.external/javax.inject/pom.properties
+        0  01-13-14 13:33   javax/
+        0  01-13-14 13:33   javax/inject/
+      418  01-13-14 13:33   javax/inject/Named.class
+      433  01-13-14 13:33   javax/inject/Qualifier.class
+      450  01-13-14 13:33   javax/inject/Inject.class
+      359  01-13-14 13:33   javax/inject/Singleton.class
+      425  01-13-14 13:33   javax/inject/Scope.class
+      226  01-13-14 13:33   javax/inject/Provider.class
+ --------                   -------
+    13311                   17 files

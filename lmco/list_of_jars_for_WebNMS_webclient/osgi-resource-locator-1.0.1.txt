@@ -1,0 +1,30 @@
+Archive:  osgi-resource-locator-1.0.1.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2979  10-23-17 12:28   META-INF/MANIFEST.MF
+     2186  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  01-13-11 06:59   META-INF/
+        0  01-13-11 06:59   META-INF/maven/
+        0  01-13-11 06:59   META-INF/maven/org.glassfish.hk2/
+        0  01-13-11 06:59   META-INF/maven/org.glassfish.hk2/osgi-resource-locator/
+     6188  01-13-11 06:59   META-INF/maven/org.glassfish.hk2/osgi-resource-locator/pom.xml
+      123  01-13-11 06:59   META-INF/maven/org.glassfish.hk2/osgi-resource-locator/pom.properties
+        0  01-13-11 06:59   org/
+        0  01-13-11 06:59   org/glassfish/
+        0  01-13-11 06:59   org/glassfish/hk2/
+        0  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/
+      505  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoader$ProviderFactory.class
+     2421  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoader.class
+     1555  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ResourceFinder.class
+     1336  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/Activator.class
+     1236  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$1.class
+     1420  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$2.class
+     1687  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$BundleTracker.class
+     1787  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$ProvidersPerBundle.class
+     2478  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$ProvidersList.class
+     1724  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$DefaultFactory.class
+    12020  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl.class
+     2326  01-13-11 06:59   org/glassfish/hk2/osgiresourcelocator/ResourceFinderImpl.class
+ --------                   -------
+    43347                   25 files

@@ -1,0 +1,44 @@
+Archive:  jersey-media-sse-2.7.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     4791  10-23-17 12:29   META-INF/MANIFEST.MF
+     3651  10-23-17 12:29   META-INF/WEBNMS.SF
+     1376  10-23-17 12:29   META-INF/WEBNMS.RSA
+        0  03-12-14 18:29   META-INF/
+        0  03-12-14 18:29   META-INF/maven/
+        0  03-12-14 18:29   META-INF/maven/org.glassfish.jersey.media/
+        0  03-12-14 18:29   META-INF/maven/org.glassfish.jersey.media/jersey-media-sse/
+      149  03-12-14 18:29   META-INF/maven/org.glassfish.jersey.media/jersey-media-sse/pom.properties
+     3892  03-12-14 18:07   META-INF/maven/org.glassfish.jersey.media/jersey-media-sse/pom.xml
+        0  03-12-14 18:29   org/
+        0  03-12-14 18:29   org/glassfish/
+        0  03-12-14 18:29   org/glassfish/jersey/
+        0  03-12-14 18:29   org/glassfish/jersey/media/
+        0  03-12-14 18:29   org/glassfish/jersey/media/sse/
+     2069  03-12-14 18:29   org/glassfish/jersey/media/sse/EventInput.class
+     3310  03-12-14 18:29   org/glassfish/jersey/media/sse/EventInputReader.class
+      207  03-12-14 18:29   org/glassfish/jersey/media/sse/EventListener.class
+      635  03-12-14 18:29   org/glassfish/jersey/media/sse/EventOutput.class
+      979  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource$1.class
+      881  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource$2.class
+     2053  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource$Builder.class
+     9007  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource$EventProcessor.class
+     1244  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource$State.class
+     9397  03-12-14 18:29   org/glassfish/jersey/media/sse/EventSource.class
+      249  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEvent$1.class
+     2803  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEvent$Builder.class
+     6549  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEvent.class
+      991  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEventReader$1.class
+     1313  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEventReader$State.class
+     6874  03-12-14 18:29   org/glassfish/jersey/media/sse/InboundEventReader.class
+     4151  03-12-14 18:29   org/glassfish/jersey/media/sse/LocalizationMessages.class
+     3216  03-12-14 18:29   org/glassfish/jersey/media/sse/OutboundEvent$Builder.class
+     2054  03-12-14 18:29   org/glassfish/jersey/media/sse/OutboundEvent.class
+     1260  03-12-14 18:29   org/glassfish/jersey/media/sse/OutboundEventWriter$1.class
+     5812  03-12-14 18:29   org/glassfish/jersey/media/sse/OutboundEventWriter.class
+      800  03-12-14 18:29   org/glassfish/jersey/media/sse/SseBroadcaster.class
+      764  03-12-14 18:29   org/glassfish/jersey/media/sse/SseFeature$1.class
+     2235  03-12-14 18:29   org/glassfish/jersey/media/sse/SseFeature.class
+     3107  03-12-14 18:07   org/glassfish/jersey/media/sse/localization.properties
+ --------                   -------
+    85819                   39 files

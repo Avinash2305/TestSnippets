@@ -1,0 +1,28 @@
+Archive:  terminal-ssh-maverick.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2217  10-23-17 12:29   META-INF/MANIFEST.MF
+     1877  10-23-17 12:29   META-INF/WEBNMS.SF
+     1376  10-23-17 12:29   META-INF/WEBNMS.RSA
+        0  11-13-13 16:21   META-INF/
+        0  11-13-13 16:21   META-INF/maven/
+        0  11-13-13 16:21   META-INF/maven/com.sshtools.terminal/
+        0  11-13-13 16:21   META-INF/maven/com.sshtools.terminal/terminal-ssh-maverick/
+     3104  11-13-13 16:18   META-INF/maven/com.sshtools.terminal/terminal-ssh-maverick/pom.xml
+      128  11-13-13 16:21   META-INF/maven/com.sshtools.terminal/terminal-ssh-maverick/pom.properties
+        0  11-13-13 16:21   com/
+        0  11-13-13 16:21   com/sshtools/
+        0  11-13-13 16:21   com/sshtools/terminal/
+        0  11-13-13 16:21   com/sshtools/terminal/schemes/
+        0  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/
+     1202  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshTerminalProtocolTransport$3.class
+     1007  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshPkSchemeHandler.class
+     9084  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshTerminalProtocolTransport.class
+      825  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/Command$1.class
+     1105  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshTerminalProtocolTransport$1.class
+     1193  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshSchemeHandler.class
+     3139  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/Command.class
+     1296  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshTerminalProtocolTransport$2.class
+     2787  11-13-13 16:21   com/sshtools/terminal/schemes/maverickssh/MaverickSshPkTerminalProtocolTransport.class
+ --------                   -------
+    30340                   23 files

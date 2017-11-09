@@ -1,0 +1,18 @@
+Archive:  AdventNetWCFSession.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+      718  10-23-17 12:28   META-INF/MANIFEST.MF
+      898  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  11-17-03 19:47   META-INF/
+        0  11-17-03 19:47   com/
+        0  11-17-03 19:47   com/adventnet/
+        0  11-17-03 19:47   com/adventnet/webclient/
+        0  11-17-03 19:47   com/adventnet/webclient/session/
+     2201  11-17-03 19:47   com/adventnet/webclient/session/CommonSessionForApplications.class
+     1396  11-17-03 19:47   com/adventnet/webclient/session/SessionForApplication.class
+      508  11-17-03 19:47   com/adventnet/webclient/session/WebClientSession.class
+      975  11-17-03 19:47   com/adventnet/webclient/session/WebClientSessionListener.class
+     1272  11-17-03 19:47   com/adventnet/webclient/session/WebClientSessionManager.class
+ --------                   -------
+     9344                   13 files

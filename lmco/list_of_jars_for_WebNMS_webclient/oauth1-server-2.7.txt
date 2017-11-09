@@ -1,0 +1,40 @@
+Archive:  oauth1-server-2.7.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     3139  10-23-17 12:28   META-INF/MANIFEST.MF
+     3236  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  03-12-14 19:30   META-INF/
+        0  03-12-14 19:30   META-INF/maven/
+        0  03-12-14 19:30   META-INF/maven/org.glassfish.jersey.security/
+        0  03-12-14 19:30   META-INF/maven/org.glassfish.jersey.security/oauth1-server/
+     3252  03-12-14 18:07   META-INF/maven/org.glassfish.jersey.security/oauth1-server/pom.xml
+      125  03-12-14 19:30   META-INF/maven/org.glassfish.jersey.security/oauth1-server/pom.properties
+        0  03-12-14 19:30   org/
+        0  03-12-14 19:30   org/glassfish/
+        0  03-12-14 19:30   org/glassfish/jersey/
+        0  03-12-14 19:30   org/glassfish/jersey/server/
+        0  03-12-14 19:30   org/glassfish/jersey/server/oauth1/
+        0  03-12-14 19:30   org/glassfish/jersey/server/oauth1/internal/
+      278  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1ServerFeature$1.class
+     9979  03-12-14 19:30   org/glassfish/jersey/server/oauth1/DefaultOAuth1Provider.class
+      284  03-12-14 19:30   org/glassfish/jersey/server/oauth1/DefaultOAuth1Provider$1.class
+     2389  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1ServerFeature$OAuthModelProcessor.class
+      300  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1Consumer.class
+     1199  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1ServerProperties.class
+      426  03-12-14 19:30   org/glassfish/jersey/server/oauth1/TokenResource.class
+     3719  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1ServerFeature.class
+     4702  03-12-14 19:30   org/glassfish/jersey/server/oauth1/DefaultOAuth1Provider$Token.class
+     4435  03-12-14 19:30   org/glassfish/jersey/server/oauth1/NonceManager.class
+      894  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1Provider.class
+     1585  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1SecurityContext.class
+     5357  03-12-14 19:30   org/glassfish/jersey/server/oauth1/internal/AccessTokenResource.class
+     5326  03-12-14 19:30   org/glassfish/jersey/server/oauth1/internal/RequestTokenResource.class
+     5030  03-12-14 19:30   org/glassfish/jersey/server/oauth1/internal/OAuthServerRequest.class
+     2240  03-12-14 19:30   org/glassfish/jersey/server/oauth1/internal/OAuthServerRequest$1.class
+    10473  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1ServerFilter.class
+     2379  03-12-14 19:30   org/glassfish/jersey/server/oauth1/DefaultOAuth1Provider$Consumer.class
+     1449  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1Exception.class
+      532  03-12-14 19:30   org/glassfish/jersey/server/oauth1/OAuth1Token.class
+ --------                   -------
+    74104                   35 files

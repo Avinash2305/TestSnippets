@@ -1,0 +1,37 @@
+Archive:  jackson-module-jaxb-annotations-2.4.2.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     4904  10-23-17 12:29   META-INF/MANIFEST.MF
+     2538  10-23-17 12:29   META-INF/WEBNMS.SF
+     1376  10-23-17 12:29   META-INF/WEBNMS.RSA
+        0  08-14-14 18:32   META-INF/
+      321  08-14-14 18:32   META-INF/LICENSE
+      825  08-14-14 18:32   META-INF/NOTICE
+        0  08-14-14 18:32   META-INF/maven/
+        0  08-14-14 18:32   META-INF/maven/com.fasterxml.jackson.module/
+        0  08-14-14 18:32   META-INF/maven/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/
+      168  08-14-14 18:32   META-INF/maven/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/pom.properties
+     4313  08-14-14 18:32   META-INF/maven/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/pom.xml
+        0  08-14-14 18:32   META-INF/services/
+       55  08-14-14 18:32   META-INF/services/com.fasterxml.jackson.databind.Module
+        0  08-14-14 18:32   com/
+        0  08-14-14 18:32   com/fasterxml/
+        0  08-14-14 18:32   com/fasterxml/jackson/
+        0  08-14-14 18:32   com/fasterxml/jackson/module/
+        0  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/
+     2224  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/AdapterConverter.class
+     1002  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/JaxbAnnotationIntrospector$1.class
+    36725  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/JaxbAnnotationIntrospector.class
+      983  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/JaxbAnnotationModule$1.class
+     1316  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/JaxbAnnotationModule$Priority.class
+     2297  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/JaxbAnnotationModule.class
+      870  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/PackageVersion.class
+        0  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/deser/
+     1484  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/deser/DataHandlerJsonDeserializer$1.class
+     1711  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/deser/DataHandlerJsonDeserializer.class
+     4495  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/deser/DomElementJsonDeserializer.class
+        0  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/ser/
+     3968  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/ser/DataHandlerJsonSerializer.class
+     3902  08-14-14 18:32   com/fasterxml/jackson/module/jaxb/ser/DomElementJsonSerializer.class
+ --------                   -------
+    75477                   32 files

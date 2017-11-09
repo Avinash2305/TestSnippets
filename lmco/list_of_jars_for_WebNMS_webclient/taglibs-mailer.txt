@@ -1,0 +1,30 @@
+Archive:  taglibs-mailer.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2249  10-23-17 12:28   META-INF/MANIFEST.MF
+     2249  10-23-17 12:28   META-INF/WEBNMS.SF
+     1376  10-23-17 12:28   META-INF/WEBNMS.RSA
+        0  12-06-02 07:16   META-INF/
+     7906  12-06-02 07:16   META-INF/taglib.tld
+        0  12-06-02 07:16   org/
+        0  12-06-02 07:16   org/apache/
+        0  12-06-02 07:16   org/apache/taglibs/
+        0  12-06-02 07:16   org/apache/taglibs/mailer/
+     2963  12-06-02 07:16   org/apache/taglibs/mailer/AddRecipientTag.class
+     4955  12-06-02 07:16   org/apache/taglibs/mailer/AttachTag.class
+     8925  12-06-02 07:16   org/apache/taglibs/mailer/MailTag.class
+      809  12-06-02 07:16   org/apache/taglibs/mailer/ErrorTEI.class
+     3033  12-06-02 07:16   org/apache/taglibs/mailer/ErrorTag.class
+     1811  12-06-02 07:16   org/apache/taglibs/mailer/FromTag.class
+     2029  12-06-02 07:16   org/apache/taglibs/mailer/HeaderTag.class
+      854  12-06-02 07:16   org/apache/taglibs/mailer/MailAuthenticator$1.class
+     2274  12-06-02 07:16   org/apache/taglibs/mailer/MailAuthenticator.class
+     1917  12-06-02 07:16   org/apache/taglibs/mailer/MessageTag.class
+     1832  12-06-02 07:16   org/apache/taglibs/mailer/ReplyToTag.class
+     7807  12-06-02 07:16   org/apache/taglibs/mailer/SendTag.class
+     1234  12-06-02 07:16   org/apache/taglibs/mailer/Mail.class
+     1825  12-06-02 07:16   org/apache/taglibs/mailer/ServerTag.class
+     2969  12-06-02 07:16   org/apache/taglibs/mailer/SetRecipientTag.class
+     1832  12-06-02 07:16   org/apache/taglibs/mailer/SubjectTag.class
+ --------                   -------
+    60849                   25 files

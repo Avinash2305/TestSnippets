@@ -1,0 +1,35 @@
+Archive:  jstl.jar
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     2589  10-23-17 12:29   META-INF/MANIFEST.MF
+     2433  10-23-17 12:29   META-INF/WEBNMS.SF
+     1376  10-23-17 12:29   META-INF/WEBNMS.RSA
+        0  02-19-03 17:05   META-INF/
+        0  02-19-03 17:05   javax/
+        0  02-19-03 17:05   javax/servlet/
+        0  02-19-03 17:05   javax/servlet/jsp/
+        0  02-19-03 17:05   javax/servlet/jsp/jstl/
+        0  02-19-03 17:05   javax/servlet/jsp/jstl/core/
+        0  02-19-03 17:05   javax/servlet/jsp/jstl/fmt/
+        0  02-19-03 17:05   javax/servlet/jsp/jstl/sql/
+        0  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/
+     1637  02-19-03 17:05   javax/servlet/jsp/jstl/core/ConditionalTagSupport.class
+     1743  02-19-03 17:05   javax/servlet/jsp/jstl/core/LoopTagSupport$1$Status.class
+     4906  02-19-03 17:05   javax/servlet/jsp/jstl/core/LoopTagSupport.class
+      275  02-19-03 17:05   javax/servlet/jsp/jstl/core/LoopTag.class
+      342  02-19-03 17:05   javax/servlet/jsp/jstl/core/LoopTagStatus.class
+     5145  02-19-03 17:05   javax/servlet/jsp/jstl/core/Config.class
+     2542  02-19-03 17:05   javax/servlet/jsp/jstl/fmt/LocaleSupport.class
+      991  02-19-03 17:05   javax/servlet/jsp/jstl/fmt/LocalizationContext.class
+      327  02-19-03 17:05   javax/servlet/jsp/jstl/sql/Result.class
+     2599  02-19-03 17:05   javax/servlet/jsp/jstl/sql/ResultImpl.class
+      825  02-19-03 17:05   javax/servlet/jsp/jstl/sql/ResultSupport.class
+      188  02-19-03 17:05   javax/servlet/jsp/jstl/sql/SQLExecutionTag.class
+     2127  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/PermittedTaglibsTLV$PermittedTaglibsHandler.class
+      231  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/PermittedTaglibsTLV$1.class
+     4246  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/PermittedTaglibsTLV.class
+     3273  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/ScriptFreeTLV$MyContentHandler.class
+      213  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/ScriptFreeTLV$1.class
+     3846  02-19-03 17:05   javax/servlet/jsp/jstl/tlv/ScriptFreeTLV.class
+ --------                   -------
+    41854                   30 files
