@@ -1,0 +1,26 @@
+Archive:  jta.jar
+PACK200
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  02-26-01 13:17   javax/
+        0  02-26-01 13:17   javax/transaction/
+        0  02-26-01 13:17   javax/transaction/xa/
+      292  02-26-01 13:17   javax/transaction/xa/Xid.class
+     1449  02-26-01 13:17   javax/transaction/xa/XAException.class
+     1062  02-26-01 13:17   javax/transaction/xa/XAResource.class
+      456  02-26-01 13:17   javax/transaction/RollbackException.class
+      477  02-26-01 13:17   javax/transaction/HeuristicCommitException.class
+      474  02-26-01 13:17   javax/transaction/HeuristicMixedException.class
+      773  02-26-01 13:17   javax/transaction/Transaction.class
+      483  02-26-01 13:17   javax/transaction/HeuristicRollbackException.class
+      583  02-26-01 13:17   javax/transaction/SystemException.class
+      195  02-26-01 13:17   javax/transaction/Synchronization.class
+      500  02-26-01 13:17   javax/transaction/TransactionRolledbackException.class
+      491  02-26-01 13:17   javax/transaction/InvalidTransactionException.class
+      885  02-26-01 13:17   javax/transaction/TransactionManager.class
+      468  02-26-01 13:17   javax/transaction/NotSupportedException.class
+      541  02-26-01 13:17   javax/transaction/Status.class
+      661  02-26-01 13:17   javax/transaction/UserTransaction.class
+      494  02-26-01 13:17   javax/transaction/TransactionRequiredException.class
+ --------                   -------
+    10284                   20 files

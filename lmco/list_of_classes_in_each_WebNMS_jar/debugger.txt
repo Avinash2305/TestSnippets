@@ -1,0 +1,22 @@
+Archive:  debugger.jar
+PACK200
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  05-04-11 18:27   META-INF/
+      106  05-04-11 18:27   META-INF/MANIFEST.MF
+        0  05-04-11 18:27   com/
+        0  05-04-11 18:27   com/adventnet/
+        0  05-04-11 18:27   com/adventnet/util/
+        0  05-04-11 18:27   com/adventnet/util/support/
+      224  05-04-11 18:27   com/adventnet/util/support/CustomDebugInterface.class
+    11147  05-04-11 18:27   com/adventnet/util/support/CustomDebugInterfaceImpl.class
+     9033  05-04-11 18:27   com/adventnet/util/support/DatabaseCheck.class
+     9345  05-04-11 18:27   com/adventnet/util/support/DebuggingFramework.class
+     4126  05-04-11 18:27   com/adventnet/util/support/FTPUtility.class
+      963  05-04-11 18:27   com/adventnet/util/support/LogsDumper.class
+    10293  05-04-11 18:27   com/adventnet/util/support/SupportZipUtil.class
+     7353  05-04-11 18:27   com/adventnet/util/support/XMLParser.class
+     3397  05-04-11 18:27   com/adventnet/util/support/ZipUtility$ZipThread.class
+     3169  05-04-11 18:27   com/adventnet/util/support/ZipUtility.class
+ --------                   -------
+    59156                   16 files

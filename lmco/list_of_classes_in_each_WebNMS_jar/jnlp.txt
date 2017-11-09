@@ -1,0 +1,23 @@
+Archive:  jnlp.jar
+PACK200
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  12-07-00 00:07   META-INF/
+       68  12-07-00 00:07   META-INF/MANIFEST.MF
+        0  12-07-00 00:07   javax/jnlp/
+      851  12-07-00 00:07   javax/jnlp/ServiceManager.class
+      328  12-07-00 00:07   javax/jnlp/UnavailableServiceException.class
+      303  12-07-00 00:07   javax/jnlp/ServiceManagerStub.class
+      598  12-07-00 00:07   javax/jnlp/FileContents.class
+      258  12-07-00 00:07   javax/jnlp/BasicService.class
+      370  12-07-00 00:07   javax/jnlp/FileOpenService.class
+      430  12-07-00 00:07   javax/jnlp/FileSaveService.class
+      659  12-07-00 00:07   javax/jnlp/ExtensionInstallerService.class
+     1392  12-07-00 00:07   javax/jnlp/DownloadService.class
+      349  12-07-00 00:07   javax/jnlp/DownloadServiceListener.class
+      251  12-07-00 00:07   javax/jnlp/ClipboardService.class
+      350  12-07-00 00:07   javax/jnlp/PrintService.class
+      688  12-07-00 00:07   javax/jnlp/PersistenceService.class
+     1451  12-07-00 00:07   javax/jnlp/JNLPRandomAccessFile.class
+ --------                   -------
+     8346                   17 files

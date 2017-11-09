@@ -1,0 +1,36 @@
+Archive:  jcvs.jar
+PACK200
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+        0  12-26-01 12:15   META-INF/
+       68  12-26-01 12:15   META-INF/MANIFEST.MF
+        0  12-26-01 12:15   com/
+        0  12-26-01 12:15   com/ice/
+        0  12-26-01 12:15   com/ice/cvsc/
+     2007  12-26-01 12:15   com/ice/cvsc/CVSArgumentVector.class
+      686  12-26-01 12:15   com/ice/cvsc/CVSClient$NullCVSUI.class
+    39886  12-26-01 12:15   com/ice/cvsc/CVSClient.class
+     5389  12-26-01 12:15   com/ice/cvsc/CVSCUtilities.class
+      739  12-26-01 12:15   com/ice/cvsc/CVSEntry$ChildEvent.class
+      308  12-26-01 12:15   com/ice/cvsc/CVSEntry$ChildEventListener.class
+    13251  12-26-01 12:15   com/ice/cvsc/CVSEntry.class
+     2780  12-26-01 12:15   com/ice/cvsc/CVSEntryVector.class
+      487  12-26-01 12:15   com/ice/cvsc/CVSFileException.class
+     3291  12-26-01 12:15   com/ice/cvsc/CVSIgnore.class
+     3226  12-26-01 12:15   com/ice/cvsc/CVSLog.class
+     1341  12-26-01 12:15   com/ice/cvsc/CVSMode.class
+     1767  12-26-01 12:15   com/ice/cvsc/CVSNotifyItem.class
+    56443  12-26-01 12:15   com/ice/cvsc/CVSProject.class
+     4349  12-26-01 12:15   com/ice/cvsc/CVSProjectDef.class
+    12323  12-26-01 12:15   com/ice/cvsc/CVSRequest.class
+     1514  12-26-01 12:15   com/ice/cvsc/CVSRespItemVector.class
+     4060  12-26-01 12:15   com/ice/cvsc/CVSResponse.class
+      427  12-26-01 12:15   com/ice/cvsc/CVSResponseHandler.class
+     4670  12-26-01 12:15   com/ice/cvsc/CVSResponseItem.class
+     3325  12-26-01 12:15   com/ice/cvsc/CVSScramble.class
+      866  12-26-01 12:15   com/ice/cvsc/CVSTimestamp.class
+     3431  12-26-01 12:15   com/ice/cvsc/CVSTimestampFormat.class
+     2819  12-26-01 12:15   com/ice/cvsc/CVSTracer.class
+      452  12-26-01 12:15   com/ice/cvsc/CVSUserInterface.class
+ --------                   -------
+   169905                   30 files

@@ -1,0 +1,14 @@
+Archive:  ftp.jar
+PACK200
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+      434  06-23-04 22:40   com/enterprisedt/net/ftp/FTPConnectMode.class
+      962  06-23-04 22:40   com/enterprisedt/net/ftp/FTPDataSocket.class
+     2855  06-23-04 22:40   com/enterprisedt/net/ftp/test/FTPClientTest.class
+     8293  06-23-04 22:40   com/enterprisedt/net/ftp/FTPClient.class
+      637  06-23-04 22:40   com/enterprisedt/net/ftp/FTPException.class
+      525  06-23-04 22:40   com/enterprisedt/net/ftp/FTPTransferType.class
+     6653  06-23-04 22:40   com/enterprisedt/net/ftp/FTPControlSocket.class
+       71  06-23-04 22:40   META-INF/MANIFEST.MF
+ --------                   -------
+    20430                   8 files
