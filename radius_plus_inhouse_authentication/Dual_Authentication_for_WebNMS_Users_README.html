@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Dual Authentication for WebNMS Users</title>
+  </head>
+  <body>
+    <meta charset="utf-8">
+    <div align="center"><font size="+1"><u><b><font face="times new
+              roman, times, serif">Dual Authentication for WebNMS Users</font></b></u></font><br>
+    </div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;">
+      <div><font size="3" face="times new roman, times, serif">There are
+          2 cases here:<br>
+          <b><u>Case 1</u>: </b>By default radius authentication is
+          enabled. When there is an issue in reaching the radius server,
+          authentication falls back mode as in-house authentication.<br>
+        </font>
+        <hr width="100%" size="2"><font size="3" face="times new roman,
+          times, serif"></font></div>
+      <div><font size="3" face="times new roman, times, serif">We could
+          successfully achieve the above <b><i>dual authentication</i></b>&nbsp;(<b>falling
+            back to in-house authentication</b>&nbsp;when Radius server
+          is not reachable/out-of-network).</font></div>
+      <div><font size="3" face="times new roman, times, serif">We had
+          got the&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication">modified
+            files</a>&nbsp;-&nbsp;<b>RadiusAuthenticationImpl.java</b>&nbsp;&amp;&nbsp;<b>RadiusUtil.java</b>&nbsp;(along
+          with the&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/default_files">default
+            files</a>)</font></div>
+      <div><font size="3" face="times new roman, times, serif"><br>
+        </font></div>
+      <div><font size="3" face="times new roman, times, serif">Here're
+          the changes in the files:</font></div>
+      <div><font face="times new roman, times, serif"><br>
+        </font></div>
+      <div><font size="3" face="times new roman, times, serif">RadiusUtil:&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/default_files/RadiusUtil.java">default
+            file</a>&nbsp;|&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/RadiusUtil.java">changed
+            file</a>&nbsp;|&nbsp;<a
+            href="https://www.diffchecker.com/DuMZH8VW">diff</a></font></div>
+      <div><font size="3" face="times new roman, times, serif"><b>Please
+            look at the below lines/changes</b></font></div>
+      <div><font size="3" face="times new roman, times, serif"><b>Line
+            116</b>&nbsp;- Definition of&nbsp;<b><i>authenticateUser&nbsp;</i></b>method
+          - Its return type is&nbsp;<b><i><u>boolean</u></i></b>&nbsp;in
+          the default implementation, whereas<span>&nbsp;</span><g
+            class="gr_ gr_229 gr-alert gr_spell gr_inline_cards
+            gr_run_anim ContextualSpelling multiReplace" id="229"
+            data-gr-id="229" style="display: inline; color: inherit
+            !important; font-size: inherit !important; border-bottom:
+            2px solid transparent; background-repeat: no-repeat;
+            background-position: -1px calc(100% + 3px);
+            background-image:
+            url(&quot;data:image/svg+xml;charset=utf8,%3Csvg
+            xmlns='http://www.w3.org/2000/svg' width='100%'
+            height='100%'%3E%3Cline opacity='0.75' x1='4' y1='100%'
+            x2='100%' y2='100%' transform='translate(-1.5, -2.5)'
+            stroke-width='3' stroke-linecap='round'
+            stroke='%23fc5454'/%3E%3C/svg%3E&quot;); background-size:
+            calc(100% + 1px) 100%; animation: gr__appear_critical 0.4s
+            ease forwards;">it's</g><span>&nbsp;</span>changed to&nbsp;<b><i><u><g
+                  class="gr_ gr_227 gr-alert gr_gramm gr_inline_cards
+                  gr_run_anim Grammar only-ins doubleReplace
+                  replaceWithoutSep" id="227" data-gr-id="227"
+                  style="display: inline; color: inherit !important;
+                  font-size: inherit !important; border-bottom: 2px
+                  solid transparent; background-repeat: no-repeat;
+                  background-position: -1px calc(100% + 3px);
+                  background-image:
+                  url(&quot;data:image/svg+xml;charset=utf8,%3Csvg
+                  xmlns='http://www.w3.org/2000/svg' width='100%'
+                  height='100%'%3E%3Cline opacity='0.75' x1='4'
+                  y1='100%' x2='100%' y2='100%'
+                  transform='translate(-1.5, -2.5)' stroke-width='3'
+                  stroke-linecap='round'
+                  stroke='%23fc5454'/%3E%3C/svg%3E&quot;);
+                  background-size: calc(100% + 1px) 100%; animation:
+                  gr__appear_critical 0.4s ease forwards;">integer</g></u></i></b>&nbsp;in
+          the new<span>&nbsp;</span><g class="gr_ gr_228 gr-alert
+            gr_gramm gr_inline_cards gr_run_anim Punctuation only-del
+            replaceWithoutSep" id="228" data-gr-id="228" style="display:
+            inline; color: inherit !important; font-size: inherit
+            !important; border-bottom: 2px solid transparent;
+            background-repeat: no-repeat; background-position: -1px
+            calc(100% + 3px); background-image:
+            url(&quot;data:image/svg+xml;charset=utf8,%3Csvg
+            xmlns='http://www.w3.org/2000/svg' width='100%'
+            height='100%'%3E%3Cline opacity='0.75' x1='4' y1='100%'
+            x2='100%' y2='100%' transform='translate(-1.5, -2.5)'
+            stroke-width='3' stroke-linecap='round'
+            stroke='%23fc5454'/%3E%3C/svg%3E&quot;); background-size:
+            calc(100% + 1px) 100%; animation: gr__appear_critical 0.4s
+            ease forwards;">one,</g><span>&nbsp;</span>so that we can
+          handle the&nbsp;<b><i><u>radius-server-not-available</u></i></b>&nbsp;case
+          by handling that specific integer.</font></div>
+      <div><font size="3" face="times new roman, times, serif"><br>
+        </font></div>
+      <div><font size="3" face="times new roman, times, serif">Line
+          152-165 - in <a href="https://www.diffchecker.com/DuMZH8VW">https://www.diffchecker.com/DuMZH8VW</a>&nbsp;</font></div>
+      <div><font size="3" face="times new roman, times, serif">The
+          integer is returned as such from the authenticateUser method
+          (the result is derived in the
+          RadiusAuthenticationImpl.verifyCredentials method)</font></div>
+      <div><font size="3" face="times new roman, times, serif"><br>
+        </font></div>
+      <div><font size="3" face="times new roman, times, serif">RadiusAuthenticationImpl.java
+          :&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/default_files/RadiusAuthenticationImpl.java">default
+            file</a>&nbsp;|&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/RadiusAuthenticationImpl.java">changed
+            file</a>&nbsp;|&nbsp;<a
+            href="https://www.diffchecker.com/nPsdP4y0">diff</a></font></div>
+      <div><font size="3" face="times new roman, times, serif">Check the
+          lines&nbsp;<b><i><u>130-157</u></i></b>&nbsp;- radius
+          authentication integer is handled here. Specifically look at
+          lines&nbsp;<b><i><u>151-153</u></i></b>, which handles the
+          integer 0.</font></div>
+      <div><font size="3" face="times new roman, times, serif">0 means,
+          radius server is not reachable and we call&nbsp;<b><i>super.verfiyCredentials</i></b></font></div>
+    </div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font face="times new roman,
+        times, serif"><br>
+      </font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">In addition,&nbsp;We get the&nbsp;<b><g
+            class="gr_ gr_189 gr-alert gr_spell gr_inline_cards
+            gr_run_anim ContextualSpelling ins-del" id="189"
+            data-gr-id="189" style="display: inline; color: inherit
+            !important; font-size: inherit !important; border-bottom:
+            2px solid transparent; background-repeat: no-repeat;
+            background-position: -1px calc(100% + 3px);
+            background-image:
+            url(&quot;data:image/svg+xml;charset=utf8,%3Csvg
+            xmlns='http://www.w3.org/2000/svg' width='100%'
+            height='100%'%3E%3Cline opacity='0.75' x1='4' y1='100%'
+            x2='100%' y2='100%' transform='translate(-1.5, -2.5)'
+            stroke-width='3' stroke-linecap='round'
+            stroke='%23fc5454'/%3E%3C/svg%3E&quot;); background-size:
+            calc(100% + 1px) 100%; animation: gr__appear_critical 0.4s
+            ease forwards;">plain text</g><span>&nbsp;</span>password by
+          calling crypto.deCrypt</b>&nbsp;in RadiusAuthenticationImpl (<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/default_files/RadiusAuthenticationImpl.java##L65">line
+          65</a>).</font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif"><br>
+      </font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">Note that the above procedure is for radius
+        server. Please take this as the prototype and implement your
+        changes for LDAP server.</font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif"><br>
+      </font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif"><b>Other important changes are:</b></font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif"><br>
+      </font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">1.<b><span>&nbsp;</span>NmsProcessesBE.conf</b><span>&nbsp;</span>should
+        be changed to specify the authentication implementation class (<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/NmsProcessesBE.conf##L39"><b>line
+            39</b></a>)</font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">2. The external authentication server's (in
+        this case, Radius files -&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/radius_server_files/clients.conf##L235-L240">client.conf</a>&nbsp;&amp;&nbsp;<a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius_plus_inhouse_authentication/radius_server_files/users##L205-L233">users</a>)
+        should be configured for authentication.</font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font face="times new roman,
+        times, serif"><font size="3">3.&nbsp;</font><span
+          style="font-size: medium;">AuthenticationServlet need not be
+          changed for any of the above.</span></font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><span style="font-size: medium;"><font
+          face="times new roman, times, serif"><br>
+        </font></span>
+      <hr width="100%" size="2"><span style="font-size: medium;"></span><font
+        face="times new roman, times, serif"><span style="font-size:
+          medium;"><b><u>Case 2</u>:</b> Specifically handle which type
+          of authentication to be done (for which type of users) at the
+          time of authentication itself.<br>
+          The files are available at: <a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius/dual_authentication/">https://github.com/ramanan99/TestSnippets/blob/master/radius/dual_authentication/</a><br>
+          <br>
+          <a
+href="https://github.com/ramanan99/TestSnippets/blob/master/radius/dual_authentication/RadiusAuthenticationImpl.java##L93-L111">RadiusAuthenticationImpl.java</a>
+          - Look at the lines 93 to 111 where we handle the
+          authentication for one type of users in a specific manner and
+          the else block in another manner.<br>
+          <br>
+          Note that only the above cases are supported.<br>
+          Even this, we do not claim official support for the same. We'd
+          seen this working for few of our customers.<br>
+          This may need some changes in your environment (for instance,
+          when you need to decrypt the passwords, then you CANNOT opt
+          for <a href="http://bit.ly/sha1auth">SHA-1 encryption of
+            passwords</a> which will make the passwords non-decryptable.<br>
+          <br>
+          So you need to ensure that some of the use cases are taken
+          care beforehand in your source code itself.<br>
+          Hope this helps. Please get back to us with the modified files
+          for any further&nbsp;</span><font size="3">clarification in
+          this regard.</font></font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif"><br>
+      </font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">Thanks &amp; Regards,</font></div>
+    <div style="color: rgb(0, 0, 0); font-family: Verdana, arial,
+      Helvetica, sans-serif; font-size: 11px; font-style: normal;
+      font-variant-ligatures: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; orphans: 2;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 2; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration-style: initial;
+      text-decoration-color: initial;"><font size="3" face="times new
+        roman, times, serif">Venkatramanan.</font></div>
+  </body>
+</html>
