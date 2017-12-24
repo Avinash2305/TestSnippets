@@ -1,0 +1,84 @@
+ConfReader.java : com.adventnet.tools.update.viewer : not matches
+DocumentNodeProps.java : com.adventnet.tools.update.viewer : not matches
+Cursors.java : com.adventnet.tools.update.viewer : not matches
+DSFilter.java : com.adventnet.tools.update.viewer : not matches
+DiffUtility.java : com.adventnet.tools.update.viewer : not matches
+PatchQueryTool.java : com.adventnet.tools.update.viewer : not matches
+InfQueryHelper.java : com.adventnet.tools.update.viewer : not matches
+SortTableModel.java : com.adventnet.tools.update.viewer : not matches
+ViewDialog.java : com.adventnet.tools.update.viewer : not matches
+GroupingFunction.java : com.adventnet.tools.update.util : not matches
+EnhancedFileFilter.java : com.adventnet.tools.update.util : not matches
+Criteria.java : com.adventnet.tools.update.util : not matches
+ZipDiffUtil.java : com.adventnet.tools.update.util : not matches
+JarFileUtil.java : com.adventnet.tools.update.util : not matches
+Utils.java : com.adventnet.tools.update.util : not matches
+CommonUtil.java : com.adventnet.tools.update : matches
+BuilderResourceBundle.java : com.adventnet.tools.update.installer : matches
+DiskSpace.java : com.adventnet.tools.update.installer : matches
+LogFileUtil.java : com.adventnet.tools.update.installer.log : matches
+LogPrintWriter.java : com.adventnet.tools.update.installer.log : matches
+UpdateManagerLogImpl.java : com.adventnet.tools.update.installer.log : matches
+UpdateManagerLogInterface.java : com.adventnet.tools.update.installer.log : matches
+UpdateManagerLogManager.java : com.adventnet.tools.update.installer.log : matches
+ApplyPatch.java : com.adventnet.tools.update.installer : matches
+Common.java : com.adventnet.tools.update.installer : matches
+LoggingUtil.java : com.adventnet.tools.update.installer : matches
+Assorted.java : com.adventnet.tools.update.installer : matches
+Backup.java : com.adventnet.tools.update.installer : matches
+BrowserControl.java : com.adventnet.tools.update.installer : matches
+CardInterface.java : com.adventnet.tools.update.installer : matches
+CardPanel.java : com.adventnet.tools.update.installer : matches
+ContextSensitiveHelpButton.java : com.adventnet.tools.update.installer : matches
+ContextSensitiveHelpWindow.java : com.adventnet.tools.update.installer : matches
+CustomOutputStream.java : com.adventnet.tools.update.installer : matches
+DebugUtil.java : com.adventnet.tools.update.installer : matches
+GeneralUtility.java : com.adventnet.tools.update.installer : matches
+JarAndClassFileLoader.java : com.adventnet.tools.update.installer : matches
+JarChecker.java : com.adventnet.tools.update.installer : matches
+OptionDialog.java : com.adventnet.tools.update.installer : matches
+OptionDialogConstants.java : com.adventnet.tools.update.installer : matches
+OptionDialogInformer.java : com.adventnet.tools.update.installer : matches
+ParameterChangeListener.java : com.adventnet.tools.update.installer : matches
+ParameterObject.java : com.adventnet.tools.update.installer : matches
+ProcessedException.java : com.adventnet.tools.update.installer : matches
+PureUtils.java : com.adventnet.tools.update.installer : matches
+Revert.java : com.adventnet.tools.update.installer : matches
+RevertPatch.java : com.adventnet.tools.update.installer : matches
+Unzipper.java : com.adventnet.tools.update.installer : matches
+UpdateJar.java : com.adventnet.tools.update.installer : matches
+UpdateManager.java : com.adventnet.tools.update.installer : matches
+UpdateManagerInterface.java : com.adventnet.tools.update.installer : matches
+UpdateManagerUI.java : com.adventnet.tools.update.installer : matches
+VersionProfile.java : com.adventnet.tools.update.installer : matches
+ReadmeUI.java : com.adventnet.tools.update.installer : matches
+UpdateManagerCMD.java : com.adventnet.tools.update.installer : matches
+UpdateManagerParser.java : com.adventnet.tools.update.installer : matches
+Utility.java : com.adventnet.tools.update.installer : matches
+VersionChecker.java : com.adventnet.tools.update.installer : matches
+Zipper.java : com.adventnet.tools.update.installer : matches
+ContextReadme.java : com.adventnet.tools.update.installer : matches
+ContextScreen.java : com.adventnet.tools.update.installer : matches
+InstallProgress.java : com.adventnet.tools.update.installer : matches
+InstallUI.java : com.adventnet.tools.update.installer : matches
+LogsUI.java : com.adventnet.tools.update.installer : matches
+NonEditableTableModel.java : com.adventnet.tools.update.installer : matches
+PatchDetails.java : com.adventnet.tools.update.installer : matches
+PatchFilter.java : com.adventnet.tools.update.installer : matches
+PatchScreen.java : com.adventnet.tools.update.installer : matches
+ReadMeWrapper.java : com.adventnet.tools.update.installer : matches
+RevertProgress.java : com.adventnet.tools.update.installer : matches
+RevertScreen.java : com.adventnet.tools.update.installer : matches
+UninstallUI.java : com.adventnet.tools.update.installer : matches
+VersionTreeRenderer.java : com.adventnet.tools.update.installer : matches
+FeatureCompInfo.java : com.adventnet.tools.update : matches
+FeaturePrdVersionInfo.java : com.adventnet.tools.update : matches
+FeatureVersionComp.java : com.adventnet.tools.update : matches
+FileGroup.java : com.adventnet.tools.update : matches
+NewFileGroup.java : com.adventnet.tools.update : matches
+PrePostProcessInterface.java : com.adventnet.tools.update : matches
+UpdateData.java : com.adventnet.tools.update : matches
+UpdateManagerConts.java : com.adventnet.tools.update : matches
+UpdateManagerUtil.java : com.adventnet.tools.update : matches
+XmlData.java : com.adventnet.tools.update : matches
+XmlParser.java : com.adventnet.tools.update : matches

@@ -1,0 +1,7 @@
+ClassPathDetails.java : com.adventnet.builder.migration : matches
+MibDetialsPanel.java : com.adventnet.builder.migration : matches
+MigrationDetailsPanel.java : com.adventnet.builder.migration : matches
+MigrationWizard.java : com.adventnet.builder.migration : matches
+ProjectDetailPanel.java : com.adventnet.builder.migration : matches
+RegenerationClasspath.java : com.adventnet.builder.migration : matches
+logPanel.java : com.adventnet.builder.migration : matches

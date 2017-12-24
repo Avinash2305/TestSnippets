@@ -1,0 +1,17 @@
+BaseTftpClient.java : com.adventnet.nms.tftp : not matches
+NmsTftpImpl.java : com.adventnet.nms.tftp : not matches
+NmsTftpServer.java : com.adventnet.nms.tftp : not matches
+Tftp1350.java : com.adventnet.nms.tftp : not matches
+TftpAPI.java : com.adventnet.nms.tftp : not matches
+TftpClientAPI.java : com.adventnet.nms.tftp : not matches
+TftpClientImpl.java : com.adventnet.nms.tftp : not matches
+TftpError.java : com.adventnet.nms.tftp : not matches
+TftpException.java : com.adventnet.nms.tftp : not matches
+TftpImpl.java : com.adventnet.nms.tftp : not matches
+TftpImpl_Stub.java : com.adventnet.nms.tftp : not matches
+TftpLogEvent.java : com.adventnet.nms.tftp : not matches
+TftpLogger.java : com.adventnet.nms.tftp : not matches
+TftpReceive.java : com.adventnet.nms.tftp : not matches
+TftpServer.java : com.adventnet.nms.tftp : not matches
+TftpTransfer.java : com.adventnet.nms.tftp : not matches
+UdpData.java : com.adventnet.nms.tftp : not matches
