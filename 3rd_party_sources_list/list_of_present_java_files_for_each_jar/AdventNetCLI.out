@@ -1,0 +1,9 @@
+all_sources/cli/clisrc/CallBackThread.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLIAsynchSendThread.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLIMessage.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLIResourceManager.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLISession.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLITransportGroup.java:package com.adventnet.cli;
+all_sources/cli/clisrc/CLITransportPool.java:package com.adventnet.cli;
+all_sources/cli/clisrc/ConnectionHandler.java:package com.adventnet.cli;
+all_sources/cli/clisrc/ConnectionListener.java:package com.adventnet.cli;

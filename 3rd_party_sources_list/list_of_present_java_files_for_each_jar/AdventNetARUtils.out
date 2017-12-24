@@ -1,0 +1,5 @@
+all_sources/jmx/javaagent/source/mpa/runtime/com/adventnet/agent/configuration/MBeanInitializer.java:package com.adventnet.agent.configuration;
+all_sources/jmx/javaagent/source/mpa/runtime/com/adventnet/agent/configuration/MBeanProperties.java:package com.adventnet.agent.configuration;
+all_sources/jmx/javaagent/source/mpa/runtime/com/adventnet/agent/configuration/MBeansConfiguration.java:package com.adventnet.agent.configuration;
+all_sources/jmx/javaagent/source/utilities/com/adventnet/agent/utilities/srcgen/JavaFileGenUtils.java:package com.adventnet.agent.utilities.srcgen;
+all_sources/jmx/javaagent/source/utilities/com/adventnet/agent/utilities/srcgen/SwingInterface.java:package com.adventnet.agent.utilities.srcgen;
