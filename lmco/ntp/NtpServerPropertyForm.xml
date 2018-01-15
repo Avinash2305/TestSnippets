@@ -1,0 +1,11 @@
+<FORM title="NtpServer property form">
+<GROUP name="NtpServer Properties">
+        <ROW type="property" name="displayName" displayName="webclient.topo.objectdetails.displayname" isEditable="true" component="textfield"/>
+        <ROW type="property" name="type" displayName="webclient.topo.objectdetails.type" isEditable="false" component="label"/>
+        <ROW type="property" name="classname" displayName="webclient.topo.className" isEditable="false" component="label"/>
+        <ROW type="property" name="netmask" displayName="webclient.topo.objectdetails.netmask" isEditable="false" component="label"/>
+        <ROW type="property" name="pollInterval" displayName="webclient.topo.pollInterval" isEditable="true" component="textfield"/>
+        <ROW type="property" name="targetAddress" displayName="webclient.topo.targetAddress" isEditable="true" component="textfield"/>
+        <ROW type="property" name="portNo" displayName="webclient.topo.portNo" isEditable="true" component="textfield"/>
+</GROUP>
+</FORM>
