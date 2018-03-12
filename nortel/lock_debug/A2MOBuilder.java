@@ -656,7 +656,7 @@ private void addNeToFpmMap(String fpmShortName, String moName)
         mo.setType(m_device.getContainerType());
         mo.setDisplayName(c_name);
 	ManagedObject rootMo = topoApi.getByName(root_name);
-	if (topoAPI.isManagedObjectPresebt(rootMo) && rootMo.getIsContainer()) {
+	if (topoAPI.isManagedObjectPresent(rootMo) && rootMo.getIsContainer()) {
 		mo.setParentKey(root_name);
 	}else{
 		System.err.println("+++++++++ "+root_name+" is not a container. Hence "+c_name+" is added without a parent +++++++++++" );
