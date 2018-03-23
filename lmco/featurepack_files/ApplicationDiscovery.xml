@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TEST-CONFIG-DATA SYSTEM "ApplicationDiscovery.dtd">
+<TEST-CONFIG-DATA>
+<RESOURCE-TYPE ID="ORACLE-DB-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.mysql.discovery.server.model.SqlServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Oracle-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.oracle.discovery.server.OracleDiscovery" timeout="5">
+<PORT number="1521"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="WEB-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.webserver.discovery.server.model.WebServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Web-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.webserver.discovery.server.URLDiscovery" timeout="5">
+<PORT number="80"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="SMTP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.smtp.discovery.server.model.SmtpServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Smtp-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.smtp.discovery.server.SmtpDiscovery" timeout="5">
+<PORT number="25"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="POP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.pop3.discovery.server.model.PopServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Pop-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.pop3.discovery.server.Pop3Discovery" timeout="5">
+<PORT number="110"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="IMAP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.imap.discovery.server.model.ImapServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Imap-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.imap.discovery.server.ImapDiscovery" timeout="5">
+<PORT number="143"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+<ADDITIONAL-RESOURCE-PROP>
+<SNMP-PROPERTY command="GET" oidToQuery=".1.5.0" propertyName="testNameSnmp" timeout="5"/>
+</ADDITIONAL-RESOURCE-PROP>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="MAIL-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.mailserver.discovery.server.model.MailServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<MAIL-SERVER-TEST objID="Mail-Test">
+<MAIL-PORTS popPort="110" smtpPort="25"/>
+<COMMON-ARGS className="com.adventnet.nms.appln.mailserver.discovery.server.MailServerDiscovery" timeout="5"/>
+</MAIL-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="NTP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.applnfw.discovery.server.model.InetService">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Ntp-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.ntp.discovery.server.NtpDiscovery" timeout="5">
+<PORT number="123"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="WEBLOGIC-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.webserver.discovery.server.model.WebServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="WebLogic-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.webserver.discovery.server.URLDiscovery" timeout="5">
+<PORT number="7001"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="FTP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.ftp.discovery.server.model.FtpServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Ftp-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.ftp.discovery.server.FtpDiscovery" timeout="3">
+<PORT number="21"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="Exchange-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.applnfw.discovery.server.model.InetService">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Exchange-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.exchange.discovery.server.ExchangeDiscovery" timeout="3"/>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="MSSQL-DB-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.mysql.discovery.server.model.SqlServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Mssql-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.mssql.discovery.server.MssqlDiscovery" timeout="3">
+<PORT number="1433"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="MYSQL-DB-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.mysql.discovery.server.model.SqlServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Mysql-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.mysql.discovery.server.MysqlDiscovery" timeout="3">
+<PORT number="3306"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="NTP-server" discoverAllInstances="false" topologyClass="com.adventnet.nms.appln.ntp.discovery.server.model.NtpServer">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="Ntp-Test">
+<COMMON-ARGS className="com.adventnet.nms.appln.ntp.discovery.server.NtpDiscovery" timeout="5">
+<PORT number="123"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+<RESOURCE-TYPE ID="groupTextzz" discoverAllInstances="false" topologyClass="com.adventnet.nms.applnfw.discovery.server.model.InetService">
+<TEST-GROUP CONDITION="all" TestGroupID="Discovery Rule">
+<RESOURCE-TEST>
+<SNMP-PROPERTY-TEST checkAgainst="VALUE" command="GET" snmpID="SnmpProp1" timeout="5">
+<STRING-COMPARE expectedValue="ayush-0791-temp" testCondition="contains" testProperty=".1.3.6.1.2.1.1.5.0"/>
+</SNMP-PROPERTY-TEST>
+</RESOURCE-TEST>
+<RESOURCE-TEST>
+<APPLN-SERVER-TEST objID="url-test">
+<COMMON-ARGS className="com.adventnet.nms.appln.webserver.discovery.server.URLDiscovery" timeout="10">
+<PORT number="80"/>
+</COMMON-ARGS>
+</APPLN-SERVER-TEST>
+</RESOURCE-TEST>
+</TEST-GROUP>
+</RESOURCE-TYPE>
+</TEST-CONFIG-DATA>
