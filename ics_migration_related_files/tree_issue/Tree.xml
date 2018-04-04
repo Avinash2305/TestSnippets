@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DEVICE-DATA ICON-FILE="images/logo.png" TARGET="center" Client="All" ID="AdventNet" URL="jsp/ShowImage.jsp?imageName=../images/screen.png" MODULE-NAME="Default" TREE-NAME="AdventNet Web NMS">
+<DEVICE-GROUP ICON-FILE="images/panel.png" TARGET="center" Client="All" ID="WebNMS-Panels" URL="jsp/ShowImage.jsp?imageName=../images/screen.png" MODULE-NAME="Default" TREE-NAME="Applications">
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" TREE-NAME="Home" FRAME-TITLE="Admin" TARGET="center" Client="HTML" URL="/home/Homepage.do" ID="Home" MODULE-NAME="Default" TAB="true">
+
+                         <LEVEL-1 TARGET="center" MODULE-NAME="Home" Client="HTML" TREE-NAME="Home" ID="overview" URL="/home/Homepage.do" PANEL-KEY="Home">
+                         </LEVEL-1>
+                       </DEVICE>
+<DEVICE TARGET="center" ICON-FILE="images/maps.png" ID="Maps" MENU-FILE-NAME="mapmenu.xml" Client="All" PANEL-KEY="MapApplet" TREE-NAME="Network Maps" MODULE-NAME="Default" URL="/map/MapView.do" TAB="true" HTML-TABLE="Network Maps">
+<LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.map.example.layout" ID="ExampleLayout.netmap" URL="/map/ExampleLayout.do?layout=ring" PARENT="Maps" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Network Maps"/>
+</DEVICE>
+
+<DEVICE PANEL-NAME="com.adventnet.nms.util.ImagePanel" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/faulttreeicon.png" TARGET="center" IMAGE-NAME="images/faultmain.gif" MODULE-NAME="Default" ID="Fault" INIT-ON-STARTUP="false" URL="jsp/ShowImage.jsp?imageName=../images/faultmain.gif" PANEL-KEY="Fault" Client="All" TREE-NAME="Fault Management" TAB="true">
+<LEVEL-1 ICON-FILE="images/event.png" TARGET="center" MODULE-NAME="Events" MENU-FILE-NAME="eventsmenu.xml" TABLE-COLUMNS="Status=severity=55;Source=source=135;Date=time=155;Message=text=275;" ID="Events" TABLE-POPUP-MENU="View" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" URL="/fault/NetworkEvent.do" PANEL-KEY="EventBrowser" Client="All" TREE-NAME="Network Events"/>
+<LEVEL-1 ICON-FILE="images/alarm.png" TARGET="center" MODULE-NAME="Alerts" MENU-FILE-NAME="alertsmenu.xml" TABLE-COLUMNS="Status=severity=55;Failure Object=entity=135;Alarm Group=groupName=150;Owner=who=60;Date/Time=modTime=155;Alarm Message=message=275;" ID="Alerts" TABLE-POPUP-MENU="View" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" URL="/fault/AlarmView.do" PANEL-KEY="AlertApplet" Client="All" TREE-NAME="Alarms"/>
+</DEVICE>
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" IMAGE-NAME="images/configmain.gif" PANEL-KEY="Configuration" TREE-NAME="Configuration" FRAME-TITLE="Configuration Management" TARGET="center" Client="Java" ID="Configuration" URL="jsp/ShowImage.jsp?imageName=../images/configmain.gif" PANEL-NAME="com.adventnet.nms.util.ImagePanel" MODULE-NAME="Default" ICON-FILE="images/configmgmttreeicon.png">
+<DEVICE ICON-FILE="images/batchconfigtreeicon.png" ID="Batch Configuration" MENU-FILE-NAME="configmenu.xml" TABLE-POPUP-MENU="View" Client="Java" PANEL-NAME="com.adventnet.nms.config.ConfigPanel" TREE-NAME="Batch Configuration" TREE-POPUP-MENU="configmenu.xml" MODULE-NAME="Default"/>
+<DEVICE PANEL-NAME="com.adventnet.nms.config.ConfigAuditBrowser" PARENT-ID="Configuration" ICON-FILE="images/audit.png" VIEW-LENGTH="20" MODULE-NAME="Audit" MENU-FILE-NAME="configauditmenu.xml" TABLE-COLUMNS="Task Name=taskName=150;Device Name=deviceName=75;Start Time=timeOfStart=75;Finish Time=timeOfFinish=75;Status=status=75;" ID="ConfigAudit" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" TABLE-POPUP-MENU="View" PANEL-KEY="ConfigAuditBrowser" TREE-NAME="Audit"/>
+</DEVICE>
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" IMAGE-NAME="images/provisioningMain.gif" PANEL-KEY="Provisioning" TREE-NAME="Provisioning" FRAME-TITLE="Provisioning Framework" TARGET="center" Client="Java" URL="jsp/ShowImage.jsp?imageName=../images/provisioningMain.gif" ID="Provisioning" MODULE-NAME="Default" PANEL-NAME="com.adventnet.nms.util.ImagePanel" ICON-FILE="images/provisioningTreeIcon.png">
+<LEVEL-1 MODULE-NAME="Default" ICON-FILE="images/templatesTreeIcon.png" TABLE-POPUP-MENU="Templates" PANEL-KEY="ProvisioningTemplatesPanel" TREE-POPUP-MENU="provisioningmenu.xml" MENU-FILE-NAME="provisioningmenu.xml" PANEL-NAME="com.adventnet.nms.provisioning.ui.ProvisioningTemplatesPanel" Client="Java" TREE-NAME="Templates" ID="Templates"/>
+<LEVEL-1 MODULE-NAME="Default" ICON-FILE="images/operationsTreeIcon.png" TABLE-POPUP-MENU="ActivityList" PANEL-KEY="ProvisioningOperationsPanel" TREE-POPUP-MENU="provisioningoperationsmenu.xml" MENU-FILE-NAME="provisioningoperationsmenu.xml" PANEL-NAME="com.adventnet.nms.provisioning.ui.ProvisioningOperationsPanel" Client="Java" TREE-NAME="ActivityList" ID="ActivityList"/>
+</DEVICE>
+<DEVICE PANEL-NAME="com.adventnet.nms.util.ImagePanel" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/perfmgmttreeicon.png" TARGET="center" IMAGE-NAME="images/perfmgmtmain.gif" MODULE-NAME="Default" ID="Performance" INIT-ON-STARTUP="false" URL="/perf/ConfiguredCollection.do" PANEL-KEY="Performance" Client="All" TREE-NAME="Performance" TAB="true">
+
+
+<LEVEL-1 ICON-FILE="images/configcollecttreeicon.png" TARGET="center" MODULE-NAME="Stats Admin" MENU-FILE-NAME="pollmenu.xml" TABLE-COLUMNS="Statistic Name=name=160;Poll Id=id=40;DNS Name=dnsName=160;Data Identifier=oid=100;Community=community=75;Interval=period=60;Active=active=30;Multiple=isMultiplePolledData=30;Snmp Version=snmpVersion=20;User Name=userName=100;Context Name=contextName=60" ID="Stats Admin" TABLE-POPUP-MENU="View" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" URL="/perf/ConfiguredCollection.do" PANEL-KEY="StatsAdminPanel" Client="All" TREE-NAME="Configured Collection" VIEW-CRITERIA="ownerName=!JVMPD;"/>
+</DEVICE>
+
+<DEVICE TABLE-COLUMNS="Name=name=150;IPAddress=ipAddress=100;Status=status=70;Type=type=90;IsSnmp=isSNMP=65;NetMask=netmask=100;" Client="All" TREE-NAME="Network Database" PANEL-KEY="NmsListView" ICON-FILE="images/ntwkdbtreeicon.png" TARGET="center" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" ID="Network Database" URL="/topo/NetworkInventory.do" MODULE-NAME="Network Database" MENU-FILE-NAME="dbmenu.xml" TAB="true">
+      <LEVEL-1 ID="Network Database.CompleteView" VIEW-LENGTH="25" PREVIOUS-NODE="START" VIEW-CRITERIA="" TREE-NAME="webclient.topo.tree.completeview" USERNAME="root" URL="/topo/NetworkInventory.do" ICON-FILE="/webclient/topo/images/completeview.gif" TARGET="center" MODULE-NAME="Network Database" MODULENAME="Network Database" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" NODE-INDEX="0" NODETYPE="LEVEL-1" Client="HTML" TABLE-COLUMNS="Name=name=75;IPAddress=ipAddress=75;Status=status=75;Type=type=75;NetMask=netmask=75;" TABLE-POPUP-MENU="View" NODEID="Network Database.CompleteView" PANEL-KEY="NmsListView" DEVICE-REF="Network Database" PARENT="Network Database" FRAME-TITLE="" MENU-FILE-NAME="dbmenu.xml" SHOW-TREENODE-PROPERTIES="true"/>
+
+<LEVEL-1 TREE-NAME="Networks" VIEW-LENGTH="25" DEVICE-REF="Network Database" PREVIOUS-NODE="Network Database.CompleteView" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" ICON-FILE="images/networktreeicon.png" MODULE-NAME="Network Database" ID="Network Database.Networks" TARGET="center" PANEL-KEY="NmsListView" MENU-FILE-NAME="dbmenu.xml" TABLE-COLUMNS="Name=name=75;Type=type=75;IPAddress=ipAddress=75;NetMask=netmask=75;Discover=discover=75;Status=status=75;Last Status ChangeTime=statusChangeTime=75" VIEW-CRITERIA="isNetwork=true;" Client="All" URL="/topo/NetworkInventory.do"/>
+<LEVEL-1 TREE-NAME="Nodes" VIEW-LENGTH="25" DEVICE-REF="Network Database" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" ICON-FILE="images/nodetreeicon.png" MODULE-NAME="Network Database" ID="Network Database.Nodes" TARGET="center" PANEL-KEY="NmsListView" MENU-FILE-NAME="dbmenu.xml" TABLE-COLUMNS="Name=name=75;Type=type=75;IPAddress=ipAddress=75;NetMask=netmask=75;IsSNMP=isSNMP=75;Status=status=75;Last Status ChangeTime=statusChangeTime=75;" VIEW-CRITERIA="isNode=true;" Client="All" URL="/topo/NetworkInventory.do"/>
+<LEVEL-1 TREE-NAME="Interfaces" VIEW-LENGTH="25" DEVICE-REF="Network Database" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" ICON-FILE="images/redDot.png" MODULE-NAME="Network Database" ID="Network Database.Interfaces" TARGET="center" PANEL-KEY="NmsListView" MENU-FILE-NAME="dbmenu.xml" TABLE-COLUMNS="Name=name=75;Type=type=75;IPAddress=ipAddress=75;NetMask=netmask=75;IsSNMP=isSNMP=75;Status=status=75;Last Status ChangeTime=statusChangeTime=75;" VIEW-CRITERIA="isInterface=true;" Client="All" URL="/topo/NetworkInventory.do"/>
+<LEVEL-1 VIEW-LENGTH="25" MENU-FILE-NAME="dbmenu.xml" Client="All" DEVICE-REF="Network Database" TARGET="center" MODULE-NAME="Network Database" URL="/topo/NetworkInventory.do" TABLE-COLUMNS="Name=name=93;IPAddress=ipAddress=87;NetMask=netmask=91;SNMP Version=version=91;System Description=sysDescr=116;Port Count=numPorts=122;Status=status=99;Last StatusChangeTime=statusChangeTime=119;" VIEW-CRITERIA="type=*Switch*;" TREE-NAME="Switches" ICON-FILE="images/switch1.png" PANEL-KEY="NmsListView" ID="Network Database.Switches" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" TABLE-POPUP-MENU="View"/>
+<LEVEL-1 VIEW-LENGTH="25" MENU-FILE-NAME="dbmenu.xml" CLIENT="All" DEVICE-REF="Network Database" TARGET="center" MODULE-NAME="Network Database" URL="/topo/NetworkInventory.do" TABLE-COLUMNS="Name=name=89;Type=type=67;IPAddress=ipAddress=97;NetMask=netmask=100;SNMP Version=version=91;System Description=sysDescr=166;Status=status=78;Last Status Change Time=statusChangeTime=181;" VIEW-CRITERIA="isRouter=true;" TREE-NAME="Routers" ICON-FILE="images/routermap.png" PANEL-KEY="NmsListView" ID="Network Database.Routers" TREE-POPUP-MENU="Custom Views,frameoptions.xml,TreeOperations.xml" TABLE-POPUP-MENU="View"/>
+</DEVICE>
+
+<DEVICE PANEL-NAME="com.adventnet.nms.util.ImagePanel" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/admintooltreeicon.png" TARGET="center" IMAGE-NAME="images/admintoolsmain.gif" MODULE-NAME="Default" ID="AdminTool" INIT-ON-STARTUP="false" URL="jsp/ShowImage.jsp?imageName=../images/admintoolsmain.gif" PANEL-KEY="AdminTool" Client="All" TREE-NAME="Administration Tools">
+<LEVEL-1 MODULE-NAME="Policy" ICON-FILE="images/policy.png" TABLE-COLUMNS="Name=name=200;Groupname=groupName=170;Status=status=100;Period=period=80;" URL="jsp/GetPolicy.jsp" PANEL-NAME="com.adventnet.nms.policyui.NmsPolicyPanel" MENU-FILE-NAME="policymenu.xml" Client="All" TREE-NAME="Policies" ID="Policy" TARGET="center"/>
+<LEVEL-1 ICON-FILE="images/sys.png" TARGET="center" Client="HTML" ID="System Administration" URL="jsp/SysAdminFrontPage.jsp" MODULE-NAME="Default" TREE-NAME="System Administration"/>
+</DEVICE>
+
+<DEVICE PANEL-NAME="com.adventnet.nms.util.ImagePanel" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/snmptoolstreeicon.png" TARGET="center" IMAGE-NAME="images/snmptoolsmain.gif" MODULE-NAME="Default" ID="Snmp" INIT-ON-STARTUP="false" URL="jsp/ShowImage.jsp?imageName=../images/snmptoolsmain.gif" PANEL-KEY="Snmp" Client="All" TREE-NAME="SNMP Tools" TAB="true">
+<LEVEL-1 TARGET="center" ICON-FILE="images/origin.png" ID="Mib Manager" MENU-FILE-NAME="mibmenu.xml" Client="All" PANEL-NAME="com.adventnet.mibBrowser.MibBrowser" TREE-NAME="Mib Manager" MODULE-NAME="Default" URL="/MibBrowser.do"/>
+<LEVEL-1 INIT-ON-STARTUP="false" ICON-FILE="images/usmtable.png" Client="Java" ID="USM Table" PANEL-NAME="com.adventnet.mibBrowser.USMTable" MODULE-NAME="Default" TREE-NAME="SNMP V3 Security"/>
+</DEVICE>
+<DEVICE PANEL-NAME="com.adventnet.nms.util.ImagePanel" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/tl1treeicon.png" TARGET="center" IMAGE-NAME="images/tl1toolsmain.gif" MODULE-NAME="Default" ID="TL1" INIT-ON-STARTUP="false" URL="jsp/ShowImage.jsp?imageName=../images/tl1toolsmain.gif" PANEL-KEY="TL1" Client="Java" TREE-NAME="TL1 Tools">
+<LEVEL-1 INIT-ON-STARTUP="false" DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" ICON-FILE="images/webcrafttreeicon.png" TREE-NAME="Web Craft Interface" CLIENT="Java" MENU-FILE-NAME="tl1browsermenu.xml" ID="TL1 Browser" PANEL-NAME="com.adventnet.nms.tl1.TL1NMSBrowser"/>
+</DEVICE>
+
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" TREE-NAME="webclient.common.tree.adminnode.name" FRAME-TITLE="Admin" TARGET="center" Client="HTML" URL="/admin/CompleteAdminPanel.do" ID="admin" MODULE-NAME="Default" TAB="true">
+
+      
+
+<LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.common.tree.adminnode.completeview" ID="admincomplete" URL="/admin/CompleteAdminPanel.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Complete Admin" OPERATION="System Administration"/>
+<LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.adminpanel.securityadmin" ID="securityadmin" URL="/admin/UserAdminPanel.do" OPERATION="Security Administration" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="User Admin">
+                     <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.useradmin" ID="useradmin" URL="/admin/UserAdmin.do" OPERATION="User Administration" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="User Admin"/>
+		     <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.groupadmin" ID="groupadmin" URL="/admin/GroupAdmin.do" OPERATION="Group Operations" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Group Admin"/>
+		     <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.authaudit" ID="web-authaudit" URL="/admin/AuthAudit.do" OPERATION="Clear Audit Trails" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="AuthAudit"/>
+                     </LEVEL-1>
+<LEVEL-1 OPERATION="Topology" ACTION-ON-NO-PRIVILEGE="HIDE" ID="networkadmin" NODEID="networkadmin" NODETYPE="LEVEL-2" Client="HTML" TREE-NAME="webclient.admin.networkadmin.treenode" PREVIOUS-NODE="START" TARGET="center" URL="/topo/NetworkAdminPanel.do" PARENT="admin" USERNAME="root" MODULENAME="NetworkAdmin" MODULE-NAME="Default" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Network Admin">
+
+        <LEVEL-2 ID="newnode" NODEID="newnode" OPERATION="Add Node" ACTION-ON-NO-PRIVILEGE="HIDE" NODETYPE="LEVEL-3" Client="HTML" TREE-NAME="webclient.admin.networkadmin.addnode.treenode" PREVIOUS-NODE="START" TARGET="center" URL="/topo/addNode.do" PARENT="networkadmin" USERNAME="root" MODULENAME="AddNewNode" ICON-FILE="webclient/common/images/treedot.gif" MODULE-NAME="Default" HTML-TABLE="Network Admin"/>
+
+        <LEVEL-2 ID="addnewnetwork" NODEID="addnewnetwork" OPERATION="Add Network" ACTION-ON-NO-PRIVILEGE="HIDE" NODETYPE="LEVEL-3" Client="HTML" TREE-NAME="webclient.admin.networkadmin.addnetwork.treenode" PREVIOUS-NODE="newnode" TARGET="center" URL="/topo/addNetwork.do" PARENT="networkadmin" USERNAME="root" ICON-FILE="webclient/common/images/treedot.gif" MODULENAME="AddNewNetwork" MODULE-NAME="Default" HTML-TABLE="Network Admin"/>
+
+        <LEVEL-2 ID="refreshnode" NODEID="refreshnode" OPERATION="Refresh Node" ACTION-ON-NO-PRIVILEGE="HIDE" NODETYPE="LEVEL-3" Client="HTML" TREE-NAME="webclient.admin.networkadmin.refreshnode.treenode" PREVIOUS-NODE="addnewnetwork" TARGET="center" URL="/topo/refreshNode.do" PARENT="networkadmin" USERNAME="root" ICON-FILE="webclient/common/images/treedot.gif" MODULENAME="RefreshNode" HTML-TABLE="Network Admin" MODULE-NAME="Default"/>
+
+      </LEVEL-1>
+<LEVEL-1 OPERATION="System Administration" ACTION-ON-NO-PRIVILEGE="HIDE" ID="adminoperation" Client="HTML" TREE-NAME="webclient.admin.systemadmin.operationtitle" URL="/admin/SysAdmin.do" MODULE-NAME="Default" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="System Admin">
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.shutdown.treename" ID="shutdown" URL="/admin/ShutDown.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="System Admin"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.services.backup.treename" ID="backup" URL="/admin/Backup.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="System Admin"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.resyncne.withbackup.treename" ID="backupresync" URL="/admin/ReSyncNEWithBackup.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="System Admin"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.resyncne.withoutbackup" ID="resync" URL="/admin/ReSyncNE.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="System Admin"/>
+				   </LEVEL-1>
+<LEVEL-1 OPERATION="Runtime Administration" ACTION-ON-NO-PRIVILEGE="HIDE" ID="runtimeadmin" Client="HTML" TREE-NAME="webclient.admin.runtime.title" URL="/admin/RuntimeAdmin.do" MODULE-NAME="Default" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin">
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.discpara.link" ID="discparameterconfig" URL="/admin/ConfigDiscParam.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.disccriteria.link" ID="disccriteriaconfig" URL="/admin/CriteriaBasedDiscovery.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.rediscpara.link" ID="rediscschedular" URL="/admin/ReDiscoverySchedular.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+<LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtime.admin.filters.notifications" ID="notificationsconfig" URL="/admin/NotificationProfiles.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+<LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.trapparser.link" ID="trapconfig" URL="/admin/TrapParser.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+
+				   
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.eventparser.link" ID="eventconfig" URL="/admin/EventParser.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+<LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtime.admin.filters.event" ID="eventfiltersconfig" URL="/admin/EventFilters.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+<LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtime.admin.filters.alert" ID="alertfiltersconfig" URL="/admin/AlertFilters.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Runtime Admin"/>
+</LEVEL-1>
+<LEVEL-1 OPERATION="System Administration" ACTION-ON-NO-PRIVILEGE="HIDE" ID="serverdetails" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.details" URL="/admin/ServerDetails.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details" MODULE-NAME="Default">
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.serverdetails" ID="bedetail" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details" URL="/admin/AdminServerStatus.do?toPerform=serverDetails"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.schedulerdetails" ID="schedulerdetail" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details" URL="/admin/AdminServerStatus.do?toPerform=schedulerDetails"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.portdetails" ID="portdetail" HTML-TABLE="Server Details" ICON-FILE="webclient/common/images/treedot.gif" URL="/admin/AdminServerStatus.do?toPerform=portDetails"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.fedetails" ID="fedetail" HTML-TABLE="Server Details" ICON-FILE="webclient/common/images/treedot.gif" URL="/admin/AdminServerStatus.do?toPerform=feDetails"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverstatus.clientdetails" ID="clientdetail" HTML-TABLE="Server Details" ICON-FILE="webclient/common/images/treedot.gif" URL="/admin/AdminServerStatus.do?toPerform=clientDetails"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.serverlogs.title" ID="serverlogs" URL="/admin/ShowServerLogs.do?directory=logs" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details"/>
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.logging.link" ID="logconfig" URL="/admin/loggingAction.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details"/>
+<LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.runtimeadmin.spylog.link" ID="logView" URL="/admin/viewlogAction.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Server Details"/>
+</LEVEL-1>
+<LEVEL-1 OPERATION="System Administration" ACTION-ON-NO-PRIVILEGE="HIDE" ID="moduledetails" Client="HTML" TREE-NAME="webclient.admin.systemadmin.modulestatus.title" URL="/admin/ModuleDetails.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Module Details" MODULE-NAME="Default">
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.modulestatus.disc.title" ID="discstatus" URL="/admin/DiscModuleStatus.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Module Details"/>
+
+				   <LEVEL-2 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.modulestatus.fault.title" ID="faultstatus" URL="/admin/FaultModuleStatus.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Module Details"/>
+
+				   <LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.admin.systemadmin.modulestatus.perf.title" ID="perfstatus" URL="/admin/PerformanceModule.do" ICON-FILE="webclient/common/images/treedot.gif" HTML-TABLE="Module Details"/>
+	   </LEVEL-1>
+</DEVICE>
+
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" TREE-NAME="Reports" FRAME-TITLE="Reports" TARGET="center" Client="HTML" URL="/report/ReportViewAction.do?moType=Devices&amp;type=CPU%20Utilization&amp;pdName=CPUUtilization&amp;units=%25" ID="report" MODULE-NAME="Default" TAB="true">
+			<LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="Reports" ID="reportPage" URL="/report/ReportViewAction.do?moType=Devices&amp;type=CPU%20Utilization&amp;pdName=CPUUtilization&amp;units=%25">
+			</LEVEL-1>
+		</DEVICE>
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" TREE-NAME="webclient.common.support.tabname" FRAME-TITLE="Support" TARGET="center" Client="HTML" URL="/Support.do" ID="Support" MODULE-NAME="Default" TAB="true">
+               <LEVEL-1 TARGET="center" MODULE-NAME="Default" Client="HTML" TREE-NAME="webclient.common.support.treenode" ID="SupportNode" URL="/Support.do">
+               </LEVEL-1>
+               </DEVICE>
+<DEVICE DEFAULT-CLOSE-OPERATION="DISPOSE_ON_CLOSE" INIT-ON-STARTUP="false" IMAGE-NAME="images/configmain.gif" PANEL-KEY="Security Audit" TREE-NAME="Security Audit" FRAME-TITLE="Security Management" TARGET="center" Client="Java" ID="Security Audit" URL="jsp/ShowImage.jsp?imageName=../images/configmain.gif" PANEL-NAME="com.adventnet.nms.util.ImagePanel" MODULE-NAME="Default" ACTION-ON-NO-PRIVILEGE="HIDE" OPERATION="DUMMY" ICON-FILE="images/configmgmttreeicon.png">
+                                        <DEVICE PANEL-NAME="com.adventnet.nms.authaudit.AuthAuditBrowser" PARENT-ID="Security Audit" ICON-FILE="images/audit.png" VIEW-LENGTH="20" MODULE-NAME="AuthAudit" MENU-FILE-NAME="authauditmenu.xml" TABLE-COLUMNS="User Name=userName=150;Operation Name=operation=75;Audit Time=auditTime=75;Status=status=75;Category=category=75;Audited Object=auditedObj=75;" ID="AuthAudit" TREE-POPUP-MENU="Custom Views,frameoptions.xml" TABLE-POPUP-MENU="View" PANEL-KEY="AuthAuditBrowser" TREE-NAME="AuthAudit"/>
+                           </DEVICE>
+</DEVICE-GROUP>
+</DEVICE-DATA>
